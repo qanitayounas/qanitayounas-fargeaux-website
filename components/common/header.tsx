@@ -46,20 +46,24 @@ export default function Header() {
             ))}
           </nav>
 
-          {/* Desktop CTA Buttons */}
+          {/* Desktop Download Buttons */}
           <div className="hidden lg:flex items-center gap-3">
             <Button
               variant="ghost"
               asChild
               className="text-white hover:bg-white/10 hover:text-white font-inter"
             >
-              <Link href="/signin">Sign In</Link>
+              <a href="/downloads/android.apk" download>
+                Download for Android
+              </a>
             </Button>
             <Button
               asChild
               className="bg-[#f97316] hover:bg-[#f97316]/90 text-white font-medium rounded-xl shadow-md hover:shadow-lg transition-all font-inter"
             >
-              <Link href="/trial">Start Free Trial</Link>
+              <a href="/downloads/ios.ipa" download>
+                Download for iOS
+              </a>
             </Button>
           </div>
 
@@ -98,13 +102,17 @@ export default function Header() {
                 asChild
                 className="w-full justify-center text-white hover:bg-white/10 hover:text-white rounded-xl font-inter"
               >
-                <Link href="/signin">Sign In</Link>
+                <a href="/downloads/android.apk" download>
+                  Download for Android
+                </a>
               </Button>
               <Button
                 asChild
                 className="w-full justify-center bg-[#f97316] hover:bg-[#f97316]/90 text-white font-medium rounded-xl shadow-md font-inter"
               >
-                <Link href="/trial">Start Free Trial</Link>
+                <a href="/downloads/ios.ipa" download>
+                  Download for iOS
+                </a>
               </Button>
             </div>
           </div>
