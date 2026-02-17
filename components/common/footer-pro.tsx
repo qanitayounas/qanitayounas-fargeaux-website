@@ -16,7 +16,7 @@ export default function FooterPro() {
             <Link href="/" className="flex items-center gap-3 group">
               <div className="w-10 h-10 relative flex-shrink-0">
                 <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/d-kgNxZBOrvMI4HZzXn5iUr2IUNDMVDf.jpeg"
+                  src="/assets/logo.png"
                   alt="Fargeaux"
                   width={40}
                   height={40}
