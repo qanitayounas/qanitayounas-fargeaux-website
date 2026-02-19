@@ -18,7 +18,7 @@ export default function Header() {
   ]
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-white/10 bg-[#334155]/95 backdrop-blur-lg">
+    <header className="sticky top-0 z-50 w-full border-b border-white/10 bg-[#334155]/95 backdrop-blur-lg font-poppins">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
 
@@ -34,7 +34,7 @@ export default function Header() {
               height={34}
               className="rounded-lg"
             />
-            <span className="text-lg font-semibold text-white">
+            <span className="text-lg font-bold text-white tracking-wide">
               Fargeaux
             </span>
           </Link>
@@ -48,15 +48,14 @@ export default function Header() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`relative group text-sm font-medium transition-all
-                    ${isActive ? 'text-teal-400' : 'text-white/90 hover:text-white'}
+                  className={`relative group text-sm font-semibold tracking-wide transition-all
+                    ${isActive ? 'text-[#0d9488]' : 'text-white/90 hover:text-white'}
                   `}
                 >
                   {link.label}
 
-                  {/* underline */}
                   <span
-                    className={`absolute left-0 -bottom-1 h-[2px] bg-teal-400 transition-all duration-300
+                    className={`absolute left-0 -bottom-1 h-[2px] bg-[#0d9488] transition-all duration-300
                       ${isActive ? 'w-full' : 'w-0 group-hover:w-full'}
                     `}
                   />
@@ -70,7 +69,7 @@ export default function Header() {
             <Button
               variant="ghost"
               asChild
-              className="text-white hover:bg-white/10 hover:text-white"
+              className="font-semibold text-white hover:bg-white/10 hover:text-white rounded-xl"
             >
               <a href="/downloads/android.apk" download>
                 Android
@@ -79,7 +78,7 @@ export default function Header() {
 
             <Button
               asChild
-              className="bg-orange-500 hover:bg-orange-600 text-white rounded-xl shadow-md hover:shadow-lg transition-all"
+              className="font-semibold bg-orange-500 hover:bg-orange-600 text-white rounded-xl shadow-md hover:shadow-lg transition-all"
             >
               <a href="/downloads/ios.ipa" download>
                 Download App
@@ -102,7 +101,7 @@ export default function Header() {
 
         {/* Mobile Menu */}
         {isOpen && (
-          <div className="lg:hidden py-5 border-t border-white/10 mt-3 space-y-2 bg-[#334155]">
+          <div className="lg:hidden py-5 border-t border-white/10 mt-3 space-y-2 bg-[#334155] font-poppins">
             {navLinks.map((link) => {
               const isActive = pathname === link.href
 
@@ -111,9 +110,9 @@ export default function Header() {
                   key={link.href}
                   href={link.href}
                   onClick={() => setIsOpen(false)}
-                  className={`block px-3 py-2 rounded-lg text-sm font-medium transition
+                  className={`block px-3 py-2 rounded-lg text-sm font-semibold tracking-wide transition
                     ${isActive
-                      ? 'bg-teal-500/20 text-teal-400'
+                      ? 'bg-[#0d9488]/20 text-[#0d9488]'
                       : 'text-white/90 hover:bg-white/10'
                     }`}
                 >
@@ -123,12 +122,23 @@ export default function Header() {
             })}
 
             <div className="flex flex-col gap-3 pt-4 border-t border-white/10 mt-4">
-              <Button asChild variant="outline" className="w-full rounded-xl text-white border-white/20">
-                <a href="/downloads/android.apk" download>Android</a>
+              <Button
+                asChild
+                variant="outline"
+                className="w-full rounded-xl font-semibold text-white border-white/20"
+              >
+                <a href="/downloads/android.apk" download>
+                  Android
+                </a>
               </Button>
 
-              <Button asChild className="w-full bg-orange-500 hover:bg-orange-600 text-white rounded-xl">
-                <a href="/downloads/ios.ipa" download>Download App</a>
+              <Button
+                asChild
+                className="w-full font-semibold bg-orange-500 hover:bg-orange-600 text-white rounded-xl"
+              >
+                <a href="/downloads/ios.ipa" download>
+                  Download App
+                </a>
               </Button>
             </div>
           </div>
