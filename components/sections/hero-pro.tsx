@@ -102,7 +102,7 @@ export default function HeroProSection() {
 {/* RIGHT IMAGE */}
 <div className="flex justify-center lg:justify-end">
   <img
-    src="/logo1.png"
+    src="/assets/logo.png"
     alt="Fargeaux"
     className="
       w-[260px] sm:w-[320px] md:w-[380px] lg:w-[450px]
