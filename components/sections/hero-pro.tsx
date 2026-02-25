@@ -102,17 +102,14 @@ export default function HeroProSection() {
 {/* RIGHT IMAGE */}
 <div className="flex justify-center lg:justify-end">
   <img
-    src="/assets/logo.png"
+    src="/logo1.png"
     alt="Fargeaux"
     className="
       w-[260px] sm:w-[320px] md:w-[380px] lg:w-[450px]
       rounded-2xl
-      shadow-2xl
       object-contain
-      
       transition-all duration-500 ease-out
       hover:scale-105 hover:-translate-y-2 hover:rotate-3
-      
       animate-float
     "
   />
