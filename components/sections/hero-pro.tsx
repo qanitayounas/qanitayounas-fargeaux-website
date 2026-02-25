@@ -2,6 +2,9 @@
 
 import { Button } from '@/components/ui/button'
 import { FaApple, FaGooglePlay } from "react-icons/fa";
+import Image from "next/image";
+import logo1 from "@/assets/logo.png";
+
 
 const DownloadButtons = () => (
   <div className="flex flex-col sm:flex-row gap-3 pt-6 w-full sm:w-auto">
@@ -99,8 +102,8 @@ export default function HeroProSection() {
 {/* RIGHT IMAGE */}
 <div className="flex justify-center lg:justify-end">
   <img
-    src="/logo1.jfif"
-    alt="App preview"
+    src="/logo1.png"
+    alt="Fargeaux"
     className="
       w-[260px] sm:w-[320px] md:w-[380px] lg:w-[450px]
       rounded-2xl

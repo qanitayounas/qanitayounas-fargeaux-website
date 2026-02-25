@@ -22,7 +22,7 @@ export default function Header() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
 
-          {/* Logo */}
+          {/* Logo (Still Bold) */}
           <Link
             href="/"
             className="flex items-center gap-2 transition-transform duration-300 hover:scale-105"
@@ -39,7 +39,7 @@ export default function Header() {
             </span>
           </Link>
 
-          {/* Desktop Nav */}
+          {/* Desktop Nav (Less Bold Now) */}
           <nav className="hidden lg:flex items-center gap-8">
             {navLinks.map((link) => {
               const isActive = pathname === link.href
@@ -48,7 +48,7 @@ export default function Header() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`relative group text-sm font-semibold tracking-wide transition-all
+                  className={`relative group text-sm font-normal tracking-wide transition-all
                     ${isActive ? 'text-[#0d9488]' : 'text-white/90 hover:text-white'}
                   `}
                 >
@@ -64,12 +64,12 @@ export default function Header() {
             })}
           </nav>
 
-          {/* Desktop Buttons */}
+          {/* Desktop Buttons (Less Bold) */}
           <div className="hidden lg:flex items-center gap-3">
             <Button
               variant="ghost"
               asChild
-              className="font-semibold text-white hover:bg-white/10 hover:text-white rounded-xl"
+              className="font-normal text-white hover:bg-white/10 hover:text-white rounded-xl"
             >
               <a href="/downloads/android.apk" download>
                 Android
@@ -78,7 +78,7 @@ export default function Header() {
 
             <Button
               asChild
-              className="font-semibold bg-orange-500 hover:bg-orange-600 text-white rounded-xl shadow-md hover:shadow-lg transition-all"
+              className="font-normal bg-orange-500 hover:bg-orange-600 text-white rounded-xl shadow-md hover:shadow-lg transition-all"
             >
               <a href="/downloads/ios.ipa" download>
                 Download App
@@ -110,7 +110,7 @@ export default function Header() {
                   key={link.href}
                   href={link.href}
                   onClick={() => setIsOpen(false)}
-                  className={`block px-3 py-2 rounded-lg text-sm font-semibold tracking-wide transition
+                  className={`block px-3 py-2 rounded-lg text-sm font-normal tracking-wide transition
                     ${isActive
                       ? 'bg-[#0d9488]/20 text-[#0d9488]'
                       : 'text-white/90 hover:bg-white/10'
@@ -125,7 +125,7 @@ export default function Header() {
               <Button
                 asChild
                 variant="outline"
-                className="w-full rounded-xl font-semibold text-white border-white/20"
+                className="w-full rounded-xl font-normal text-white border-white/20"
               >
                 <a href="/downloads/android.apk" download>
                   Android
@@ -134,7 +134,7 @@ export default function Header() {
 
               <Button
                 asChild
-                className="w-full font-semibold bg-orange-500 hover:bg-orange-600 text-white rounded-xl"
+                className="w-full font-normal bg-orange-500 hover:bg-orange-600 text-white rounded-xl"
               >
                 <a href="/downloads/ios.ipa" download>
                   Download App

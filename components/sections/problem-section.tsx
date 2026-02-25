@@ -23,8 +23,14 @@ export default function ProblemSection() {
   ]
 
   return (
-    <section className="relative py-20 md:py-32 bg-gradient-to-b from-white to-slate-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="relative py-20 md:py-32 overflow-hidden bg-gradient-to-b from-white via-orange-50/40 to-slate-50">
+      
+      {/* Ambient Glows */}
+      <div className="absolute top-[-150px] left-[-150px] w-[500px] h-[500px] bg-primary/10 blur-3xl rounded-full -z-10" />
+      <div className="absolute bottom-[-150px] right-[-150px] w-[500px] h-[500px] bg-secondary/10 blur-3xl rounded-full -z-10" />
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
         {/* Header */}
         <div className="text-center mb-16 animate-slide-in-up">
           <h2 className="font-poppins font-800 text-4xl md:text-5xl text-foreground mb-4 text-balance">
@@ -58,7 +64,7 @@ export default function ProblemSection() {
         </div>
 
         {/* Bottom CTA */}
-        <div className="bg-gradient-to-r from-primary/10 to-secondary/10 border border-primary/20 rounded-2xl p-8 md:p-12 text-center">
+        <div className="bg-white/70 backdrop-blur-md border border-primary/20 rounded-2xl p-8 md:p-12 text-center shadow-sm">
           <p className="text-slate-700 mb-2">
             Don't become another statistic
           </p>
@@ -69,6 +75,7 @@ export default function ProblemSection() {
             Our adaptive learning system helps you master road rules in minutes, not hours. Built specifically for travelers who want to drive with confidence.
           </p>
         </div>
+
       </div>
     </section>
   )

@@ -17,8 +17,13 @@ export default function ProblemProSection() {
   ]
 
   return (
-    <section className="w-full bg-white py-16 md:py-24">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="relative w-full py-16 md:py-24 overflow-hidden bg-gradient-to-b from-slate-50 via-orange-50/40 to-white">
+      
+      {/* Ambient Background Glows */}
+      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-orange-400/10 blur-3xl rounded-full -z-10" />
+      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-primary/10 blur-3xl rounded-full -z-10" />
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Thin Orange Gradient Line */}
         <div className="mx-auto mb-6 h-[1px] w-24 bg-gradient-to-r from-orange-300/40 via-orange-500/70 to-orange-300/40" />
@@ -40,14 +45,13 @@ export default function ProblemProSection() {
             return (
               <div
                 key={idx}
-                className="bg-slate-50 rounded-2xl p-6 md:p-8 shadow-sm border border-orange-300/30
-                           hover:shadow-lg transition-all duration-500 hover:-translate-y-1"
+                className="bg-white/70 backdrop-blur-md rounded-2xl p-6 md:p-8 shadow-sm border border-orange-300/30
+                           hover:shadow-xl transition-all duration-500 hover:-translate-y-1"
               >
                 <div className="flex items-start gap-4 md:gap-5">
-                  {/* Icon Container */}
                   <div className="flex-shrink-0">
-                    <div className="flex items-center justify-center w-12 h-12 md:w-14 md:h-14 rounded-lg bg-white border border-slate-200 shadow-sm transition-all duration-300 group-hover:border-orange-400/50">
-                      <Icon className="w-6 h-6 md:w-7 md:h-7 text-orange-500 transition-all duration-300" />
+                    <div className="flex items-center justify-center w-12 h-12 md:w-14 md:h-14 rounded-lg bg-white border border-slate-200 shadow-sm">
+                      <Icon className="w-6 h-6 md:w-7 md:h-7 text-orange-500" />
                     </div>
                   </div>
                   <div>
@@ -68,7 +72,7 @@ export default function ProblemProSection() {
         </div>
 
         {/* Problems List */}
-        <div className="bg-slate-50 rounded-2xl p-6 md:p-10 shadow-sm border border-orange-300/30">
+        <div className="bg-white/70 backdrop-blur-md rounded-2xl p-6 md:p-10 shadow-sm border border-orange-300/30">
           <h3 className="font-poppins font-bold text-2xl md:text-3xl text-gray-900 mb-6 md:mb-8">
             What Most Drivers Struggle With
           </h3>

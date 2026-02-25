@@ -29,10 +29,10 @@ export default function HowItWorks() {
   ]
 
   return (
-    <section className="relative bg-white py-28 md:py-36">
+    <section className="relative bg-slate-100 py-28 md:py-36">
 
       {/* Soft noise texture */}
-      <div className="absolute inset-0 bg-[url('/patterns/noise.png')] opacity-[0.04] pointer-events-none" />
+      <div className="absolute inset-0 bg-[url('/patterns/noise.png')] opacity-[0.03] pointer-events-none" />
 
       <div className="relative max-w-6xl mx-auto px-6">
 
@@ -41,15 +41,15 @@ export default function HowItWorks() {
 
         {/* Header */}
         <div className="text-center mb-20">
-          <p className="text-primary text-xs font-semibold tracking-widest uppercase mb-3">
+          <p className="text-orange-600 text-xs font-semibold tracking-widest uppercase mb-3">
             How It Works
           </p>
 
-          <h2 className="font-poppins font-semibold text-4xl md:text-5xl text-gray-900 leading-[1.05] mb-4">
+          <h2 className="font-poppins font-semibold text-4xl md:text-5xl text-slate-900 leading-[1.05] mb-4">
             A Simple Path to Confident Driving
           </h2>
 
-          <p className="text-base text-gray-600 max-w-xl mx-auto">
+          <p className="text-base text-slate-600 max-w-xl mx-auto">
             Learn smarter with a clean, structured, and intuitive step-by-step approach.
           </p>
         </div>
@@ -62,8 +62,8 @@ export default function HowItWorks() {
             return (
               <div
                 key={i}
-                className="group relative bg-slate-50 rounded-3xl p-10 border
-                           border-orange-300/40 hover:border-orange-500/60
+                className="group relative bg-white rounded-3xl p-10 border
+                           border-slate-200 hover:border-orange-400/60
                            transition-all duration-500 shadow-sm
                            hover:shadow-[0px_14px_45px_rgba(0,0,0,0.07)]
                            hover:-translate-y-1 hover:scale-[1.017]"
@@ -75,12 +75,12 @@ export default function HowItWorks() {
                 {/* Icon */}
                 <div
                   className="relative w-16 h-16 flex items-center justify-center mb-6
-                             rounded-xl bg-white border border-slate-300 shadow-sm
-                             transition-all duration-300 group-hover:border-orange-500/50"
+                             rounded-xl bg-slate-50 border border-slate-200 shadow-sm
+                             transition-all duration-300 group-hover:border-orange-400/50"
                 >
                   <Icon
                     className="w-7 h-7 transition-all duration-300
-                               text-orange-500/70 group-hover:text-orange-600"
+                               text-orange-500/80 group-hover:text-orange-600"
                   />
 
                   {/* Soft inner glow */}
@@ -88,12 +88,12 @@ export default function HowItWorks() {
                 </div>
 
                 {/* Title */}
-                <h3 className="font-poppins text-lg font-semibold text-gray-900 mb-2">
+                <h3 className="font-poppins text-lg font-semibold text-slate-900 mb-2">
                   {step.title}
                 </h3>
 
                 {/* Description */}
-                <p className="text-sm text-gray-600 leading-relaxed">
+                <p className="text-sm text-slate-600 leading-relaxed">
                   {step.description}
                 </p>
               </div>
@@ -107,11 +107,11 @@ export default function HowItWorks() {
             <div key={index} className="flex items-center gap-2">
               <div
                 className={`w-2 h-2 rounded-full transition-all ${
-                  index === steps.length - 1 ? "bg-primary" : "bg-gray-300"
+                  index === steps.length - 1 ? "bg-orange-500" : "bg-slate-300"
                 }`}
               />
               {index < steps.length - 1 && (
-                <div className="w-5 h-[2px] bg-gray-300" />
+                <div className="w-5 h-[2px] bg-slate-300" />
               )}
             </div>
           ))}

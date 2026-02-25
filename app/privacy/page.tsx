@@ -1,153 +1,126 @@
-"use client";
+'use client'
 
-import { motion } from "framer-motion";
+import { Check } from 'lucide-react'
 
-export default function PrivacyPage() {
-  const sections = [
+export default function PricingPage() {
+  const plans = [
     {
-      title: "1. Introduction",
-      content:
-        `Bonnum Lux Group Pty Ltd ("we", "us", "our") operates Fargeaux. This Privacy Policy explains how we collect, use, and protect your information.`,
-    },
-    {
-      title: "2. Information We Collect",
-      content: `When you purchase the App, payment is processed through Apple App Store or Google Play Store. We do not directly collect or store payment information. We may collect your email address if you contact support or opt in to receive updates.`,
-      list: [
-        "Device information (device type, operating system version)",
-        "App usage data (features used, quiz scores, progress)",
-        "Crash reports and performance data",
+      name: 'Basic Package',
+      price: '$79 AUD',
+      description: 'Complete access to all core learning materials',
+      features: [
+        'All 26 modules',
+        '12 practice maps',
+        'Theory test preparation',
+        'Progress saving',
+        '424 flashcards',
       ],
+      recommended: false,
     },
     {
-      title: "3. How We Use Your Information",
-      content: `We use collected information to:`,
-      list: [
-        "Provide and maintain the App",
-        "Improve and optimize App performance",
-        "Track your learning progress within the App",
-        "Respond to support requests",
-        "Send important updates about the App (if opted in)",
-        "Process Safety Pioneer Program payments (email required)",
+      name: 'Premium Package',
+      price: '$119 AUD',
+      description: 'Unlock advanced tools and priority support',
+      features: [
+        'Everything in Basic',
+        'Interactive mini-games',
+        'Advanced practice scenarios',
+        'Priority support',
+        'Bonus study materials',
       ],
+      recommended: true,
     },
-    {
-      title: "4. Data Sharing",
-      content: `We do NOT sell your personal information. We may share data with:`,
-      list: [
-        "Service providers who assist in App operations (analytics, crash reporting)",
-        "Law enforcement if required by law",
-        "Payment processors for Safety Pioneer Program disbursement",
-      ],
-    },
-    {
-      title: "5. Data Retention",
-      content: `Learning progress is stored locally on your device. If you delete the App, this data is deleted. Any data we collect on our servers is retained only as long as necessary to fulfill the purposes outlined in this policy.`,
-    },
-    {
-      title: "6. Your Rights",
-      content: `You have the right to:`,
-      list: [
-        "Access your personal data",
-        "Request correction of inaccurate data",
-        "Request deletion of your data",
-        "Opt out of marketing communications",
-        "To exercise these rights, contact support@fargeaux.com",
-      ],
-    },
-    {
-      title: "7. Children's Privacy",
-      content: `The App is not directed at children under 16. We do not knowingly collect information from children under 16. If we discover we have collected such information, we will delete it promptly.`,
-    },
-    {
-      title: "8. International Data Transfers",
-      content: `Your information may be transferred to and processed in Australia or other countries. By using the App, you consent to such transfers.`,
-    },
-    {
-      title: "9. Security",
-      content: `We implement reasonable security measures to protect your information. However, no method of electronic transmission or storage is 100% secure.`,
-    },
-    {
-      title: "10. Changes to Privacy Policy",
-      content: `We may update this Privacy Policy. We will notify you of material changes through the App or via email.`,
-    },
-    
-  ];
+  ]
 
   return (
-    <main className="pt-24 pb-24 bg-[#f1f5f9] min-h-screen">
-      <div className="max-w-5xl mx-auto px-6">
+    <section className="relative bg-white pt-16 md:pt-20 pb-28 overflow-hidden">
 
-        {/* HERO */}
-        <motion.div
-          initial={{ opacity: 0, y: -40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-20"
-        >
-          <div className="inline-block bg-[#0d9488]/10 text-[#0d9488] px-4 py-2 rounded-full text-sm font-medium mb-6">
-            Legal Information
-          </div>
+      <div className="max-w-7xl mx-auto px-6 lg:px-8">
 
-          <h1 className="font-extrabold text-5xl md:text-6xl text-[#334155] leading-tight mb-6">
-            Privacy <span className="text-[#0d9488]">Policy</span>
+        {/* Header */}
+        <div className="text-center max-w-2xl mx-auto mb-20">
+
+          {/* Thin Accent Line */}
+          <div className="h-[1px] w-24 mx-auto bg-gradient-to-r from-orange-300/40 via-orange-500/70 to-orange-300/40 mb-6" />
+
+          <p className="text-primary text-xs tracking-widest uppercase font-medium">
+            Pricing Plans
+          </p>
+
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold text-gray-900 leading-tight mt-4">
+            Choose Your <span className="text-primary">Package</span>
           </h1>
-        </motion.div>
 
-        {/* CONTENT SECTIONS */}
-        <div className="space-y-10">
-          {sections.map((section, index) => (
-            <motion.section
+          <p className="text-gray-600 text-[15px] leading-relaxed mt-6">
+            Simple, transparent pricing designed to support your road learning journey.
+          </p>
+        </div>
+
+        {/* Pricing Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
+
+          {plans.map((plan, index) => (
+            <div
               key={index}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="bg-white rounded-2xl p-8 shadow-sm border border-[#e2e8f0] hover:shadow-xl hover:-translate-y-1 transition-all duration-300 ease-out"
+              className="relative group transition-all duration-500"
             >
-              <h2 className="text-2xl font-bold text-[#0f766e] mb-4">
-                {section.title}
-              </h2>
+              <div
+                className={`
+                  relative p-12 rounded-[2rem] border bg-white
+                  transition-all duration-500 ease-out
+                  hover:-translate-y-3 hover:shadow-2xl
+                  ${plan.recommended
+                    ? 'border-primary shadow-lg'
+                    : 'border-gray-200'}
+                `}
+              >
+                {/* Recommended Badge */}
+                {plan.recommended && (
+                  <div className="absolute -top-4 right-8 bg-primary text-white text-xs font-medium px-4 py-1 rounded-full shadow-md">
+                    Recommended
+                  </div>
+                )}
 
-              <p className="text-[#475569] leading-relaxed mb-4">
-                {section.content}
-              </p>
+                <div className="mb-8">
+                  <h3 className="text-2xl font-semibold text-gray-900 mb-3">
+                    {plan.name}
+                  </h3>
+                  <p className="text-gray-600 text-sm">
+                    {plan.description}
+                  </p>
+                </div>
 
-              {section.list && (
-                <ul className="space-y-2 mt-4">
-                  {section.list.map((item, i) => (
-                    <li key={i} className="flex gap-3 text-[#475569]">
-                      <span className="mt-2 h-2 w-2 bg-[#f97316] rounded-full shrink-0"></span>
-                      {item}
+                <div className="mb-10">
+                  <span className="text-5xl font-semibold text-primary tracking-tight">
+                    {plan.price}
+                  </span>
+                </div>
+
+                <ul className="space-y-5">
+                  {plan.features.map((feature, i) => (
+                    <li key={i} className="flex items-start gap-4">
+                      <Check
+                        size={20}
+                        className="text-primary mt-1 flex-shrink-0"
+                      />
+                      <span className="text-gray-700 text-sm">
+                        {feature}
+                      </span>
                     </li>
                   ))}
                 </ul>
-              )}
-            </motion.section>
-            
-          ))}
-            {/* CONTACT */}
-            <motion.section
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: sections.length * 0.1 }}
-            className="bg-[#0d9488] text-white rounded-2xl p-10 shadow-lg"
-          >
-            <h2 className="text-3xl font-bold mb-6">Contact Us</h2>
 
-            <p className="text-white/90 mb-6">
-              If you have questions about these Terms, please contact us.
-            </p>
-
-            <div className="space-y-2 text-white/90">
-              <p><strong>Email:</strong> legal@fargeaux.com</p>
-              <p><strong>Address:</strong> London, United Kingdom</p>
-              <p><strong>Response time:</strong> Within 30 days</p>
+              </div>
             </div>
-          </motion.section>
-        </div>
+          ))}
 
+        </div>
       </div>
-    </main>
-  );
+
+      {/* Background Accents (matching Hero) */}
+      <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 blur-3xl rounded-full -z-10" />
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-primary/5 blur-3xl rounded-full -z-10" />
+
+    </section>
+  )
 }
