@@ -7,32 +7,71 @@ export default function TermsPage() {
     {
       title: "1. Agreement to Terms",
       content:
-        'These Terms constitute a legally binding agreement between you and Fargeaux. By using our platform, you agree to comply with these Terms.',
+        "By downloading, installing, or using Fargeaux (“the App”), you agree to be bound by these Terms of Service. If you do not agree to these terms, do not use the App. The App is owned and operated by Bonnum Lux Group Pty Ltd (“we”, “us”, “our”, “the Company”), an Australian company.",
     },
     {
-      title: "2. Use License",
+      title: "2. Description of Service",
       content:
-        "We grant you a limited license for personal and educational use only.",
+        "Fargeaux is an educational mobile application designed to help international tourists learn driving rules, road signs, and driving conventions for countries they plan to visit. The App provides educational content including flashcards, quizzes, games, and reference materials for multiple countries.",
       list: [
-        "Reproduce or resell content",
-        "Reverse engineer the platform",
-        "Access via unauthorized means",
-        "Use commercially without permission",
+        "IMPORTANT DISCLAIMER: Fargeaux is an educational tool only.",
+        "It is NOT a substitute for official driving instruction, official highway codes, or professional driving lessons.",
+        "Users must comply with all applicable laws and regulations when driving in any country.",
+        "We do not guarantee that using this App will result in safe or legal driving.",
+        "Always refer to official government sources for authoritative information.",
       ],
     },
     {
-      title: "3. Account Responsibilities",
+      title: "3. Eligibility",
       content:
-        "You agree to maintain accurate information and secure your password.",
+        "You must be at least 16 years old to use this App. By using the App, you represent that you meet this age requirement.",
     },
     {
-      title: "4. Subscription & Payments",
-      content: "We offer subscription plans including a 24-hour free trial.",
+      title: "4. License Grant",
+      content:
+        "Subject to your compliance with these Terms, we grant you a limited, non-exclusive, non-transferable, revocable license to download, install, and use the App on devices you own or control, solely for your personal, non-commercial educational purposes.",
     },
     {
-      title: "5. Intellectual Property",
+      title: "5. Restrictions",
+      content: "You agree NOT to:",
+      list: [
+        "Copy, modify, or distribute the App or its content",
+        "Reverse engineer, decompile, or disassemble the App",
+        "Rent, lease, lend, sell, or sublicense the App",
+        "Use the App for any commercial purpose without our written consent",
+        "Remove any proprietary notices from the App",
+        "Use the App in any way that violates applicable laws",
+      ],
+    },
+    {
+      title: "6. Intellectual Property",
       content:
-        "All branding, flashcards, and materials are protected by intellectual property laws.",
+        "The App and all content, features, and functionality are owned by Bonnum Lux Group Pty Ltd and are protected by international copyright, trademark, and other intellectual property laws. Road sign images from various countries may be government copyright and used under applicable open government licences.",
+    },
+    {
+      title: "7. Updates and Changes",
+      content:
+        "We may update the App from time to time. Continued use of the App after updates constitutes acceptance of any changes. We reserve the right to modify these Terms at any time. Material changes will be notified through the App or via email.",
+    },
+    {
+      title: "8. Limitation of Liability",
+      content:
+        "TO THE MAXIMUM EXTENT PERMITTED BY LAW, BONNUM LUX GROUP PTY LTD SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, INCLUDING BUT NOT LIMITED TO LOSS OF PROFITS, DATA, OR USE, ARISING FROM YOUR USE OF THE APP. OUR TOTAL LIABILITY SHALL NOT EXCEED THE AMOUNT YOU PAID FOR THE APP.",
+    },
+    {
+      title: "9. Indemnification",
+      content:
+        "You agree to indemnify and hold harmless Bonnum Lux Group Pty Ltd from any claims, damages, or expenses arising from your use of the App or violation of these Terms.",
+    },
+    {
+      title: "10. Governing Law",
+      content:
+        "These Terms are governed by the laws of the Australian Capital Territory, Australia. Any disputes shall be resolved in the courts of the Australian Capital Territory.",
+    },
+    {
+      title: "11. Contact Information",
+      content:
+        "For questions about these Terms, contact us at: support@fargeaux.com",
     },
   ];
 
@@ -55,7 +94,10 @@ export default function TermsPage() {
             Terms of <span className="text-[#0d9488]">Service</span>
           </h1>
 
-        
+          <p className="text-[#475569]">
+            Bonnum Lux Group Pty Ltd | ABN: 956 937 29207
+          </p>
+
         </motion.div>
 
         {/* CONTENT SECTIONS */}
@@ -90,26 +132,7 @@ export default function TermsPage() {
             </motion.section>
           ))}
 
-          {/* CONTACT */}
-          <motion.section
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: sections.length * 0.1 }}
-            className="bg-[#0d9488] text-white rounded-2xl p-10 shadow-lg"
-          >
-            <h2 className="text-3xl font-bold mb-6">Contact Us</h2>
-
-            <p className="text-white/90 mb-6">
-              If you have questions about these Terms, please contact us.
-            </p>
-
-            <div className="space-y-2 text-white/90">
-              <p><strong>Email:</strong> legal@fargeaux.com</p>
-              <p><strong>Address:</strong> London, United Kingdom</p>
-              <p><strong>Response time:</strong> Within 30 days</p>
-            </div>
-          </motion.section>
+         
         </div>
       </div>
     </main>

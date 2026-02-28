@@ -5,40 +5,40 @@ import { motion } from "framer-motion";
 export default function Page() {
   const sections = [
     {
-      title: "1. Refund Policy",
+      title: "1. App Store Refunds",
       content:
-        "This Refund Policy explains how refund requests for Fargeaux subscriptions and purchases are handled.",
-    },
-    {
-      title: "2. App Store Refunds",
-      content:
-        "Fargeaux is sold through the Apple App Store and Google Play Store. Refund requests must be made directly through the respective platform:",
+        "Fargeaux is sold through Apple App Store and Google Play Store. Refund requests must be made directly through the respective platform:",
       list: [
         "Apple App Store: Request refunds at reportaproblem.apple.com within 14 days of purchase.",
-        "Google Play Store: Request refunds through Google Play within 48 hours for instant refund, or up to 14 days by contacting support.",
+        "Google Play Store: Request refunds through Google Play Store within 48 hours for instant refund, or up to 14 days by contacting support.",
       ],
     },
     {
-      title: "3. Our Refund Support",
+      title: "2. Our Refund Support",
       content:
-        "While we cannot process refunds directly (as payments go through Apple or Google), we will support legitimate refund requests. If you are unsatisfied with Fargeaux, contact us at support@fargeaux.com and we will guide you through the refund process.",
+        "While we cannot process refunds directly (as payments go through Apple/Google), we will support legitimate refund requests. If you are unsatisfied with Fargeaux, contact us at support@fargeaux.com and we will guide you through the refund process.",
     },
     {
-      title: "4. Refund Eligibility",
-      content: "Refunds are generally granted for the following situations:",
+      title: "3. Refund Eligibility",
+      content: "Refunds Are Generally Granted For:",
       list: [
-        "Technical issues preventing app use",
-        "Accidental or unauthorized purchases",
-        "App not functioning as described",
-        "Refunds may be denied for change of mind after extensive use",
-        "Completing all content then requesting refund",
-        "Attempting to circumvent payment system",
+        "(a) Technical issues preventing App use",
+        "(b) Accidental or unauthorized purchases",
+        "(c) App not functioning as described",
+        "Refunds May Be Denied For:",
+        "(a) Change of mind after extensive use",
+        "(b) Completing all content then requesting refund",
+        "(c) Attempting to circumvent the payment system",
       ],
     },
     {
-      title: "5. Regional Consumer Rights",
+      title: "4. Regional Consumer Rights",
       content:
         "Nothing in this policy affects your statutory rights under applicable consumer protection laws, including but not limited to Australian Consumer Law, EU Consumer Rights Directive, or UK Consumer Rights Act 2015.",
+    },
+    {
+      title: "5. Contact",
+      content: "For refund support: support@fargeaux.com",
     },
   ];
 
