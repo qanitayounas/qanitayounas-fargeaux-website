@@ -2,36 +2,43 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ------------------ GLOBAL FIX FOR MOBILE ZOOM ------------------ */
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* ------------------ FONT SETUP ------------------ */
+/* Remove Geist override completely */
+
 :root {
   --font-poppins: 'Poppins', sans-serif;
 }
 
-body {
-  font-family: var(--geist-font, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif);
-}
-
+/* Headings use Poppins */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-poppins);
   font-weight: 700;
 }
 
+/* Utility class if needed manually */
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
-  
+
   .font-poppins {
     font-family: var(--font-poppins);
   }
-  
-  /* Smooth scroll animation */
+
   .scroll-smooth {
     scroll-behavior: smooth;
   }
 }
 
+/* ------------------ THEME VARIABLES ------------------ */
 @layer base {
   :root {
     --background: 0 0% 98%;
@@ -53,21 +60,9 @@ h1, h2, h3, h4, h5, h6 {
     --border: 215 20% 85%;
     --input: 215 20% 88%;
     --ring: 172 100% 30%;
-    --chart-1: 172 100% 30%;
-    --chart-2: 30 100% 50%;
-    --chart-3: 215 100% 45%;
-    --chart-4: 172 70% 40%;
-    --chart-5: 30 100% 60%;
     --radius: 1rem;
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 215 20% 16%;
-    --sidebar-primary: 172 100% 30%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 30 100% 50%;
-    --sidebar-accent-foreground: 0 0% 100%;
-    --sidebar-border: 215 20% 85%;
-    --sidebar-ring: 172 100% 30%;
   }
+
   .dark {
     --background: 0 0% 3.9%;
     --foreground: 0 0% 98%;
@@ -88,27 +83,14 @@ h1, h2, h3, h4, h5, h6 {
     --border: 0 0% 14.9%;
     --input: 0 0% 14.9%;
     --ring: 0 0% 83.1%;
-    --chart-1: 220 70% 50%;
-    --chart-2: 160 60% 45%;
-    --chart-3: 30 80% 55%;
-    --chart-4: 280 65% 60%;
-    --chart-5: 340 75% 55%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
   }
-}
 
-@layer base {
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
+    overflow-x: hidden; /* Important */
   }
 }

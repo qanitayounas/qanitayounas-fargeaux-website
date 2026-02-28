@@ -1,205 +1,140 @@
-import type { Metadata } from 'next'
-import { Card } from '@/components/ui/card'
-import { Button } from '@/components/ui/button'
-import { Lightbulb, Map, Globe, Zap, BarChart3, Lock, ArrowRight, Check } from 'lucide-react'
+'use client'
 
-export const metadata: Metadata = {
-  title: 'Features - Fargeaux',
-  description: 'Explore Fargeaux features: 424 flashcards, 26 modules, interactive training maps, and adaptive learning for road rules mastery.',
-}
+import { motion } from "framer-motion"
+import { BookOpen, LayoutDashboard, BarChart3, ClipboardCheck } from "lucide-react"
 
-export default function FeaturesPage() {
-  const detailedFeatures = [
+export default function AboutPage() {
+  const features = [
     {
-      icon: Lightbulb,
-      title: 'Interactive Flashcards',
-      description: 'Learn from 424 meticulously researched flashcards covering road signs, rules, and regulations.',
-      highlights: [
-        'Spaced repetition algorithm for optimal memory retention',
-        'Beautiful visual design for easy recognition',
-        'Audio pronunciation for international road signs',
-        'Difficulty levels: Beginner, Intermediate, Expert',
-      ],
-      color: 'from-primary to-secondary',
+      icon: LayoutDashboard,
+      title: "Structured Modules",
+      description:
+        "26 carefully organized learning modules covering every essential UK driving topic from road signs to right of way.",
     },
     {
-      icon: Map,
-      title: 'Instinct Training Maps',
-      description: 'Master driving on unfamiliar roads with 12 interactive training scenarios.',
-      highlights: [
-        'Haptic feedback for muscle memory building',
-        '360-degree road perspectives',
-        'Real-world traffic scenarios',
-        'Performance analytics per scenario',
-      ],
-      color: 'from-secondary to-accent',
-    },
-    {
-      icon: Globe,
-      title: 'Multi-Country Support',
-      description: 'Prepare for driving in multiple countries with country-specific modules.',
-      highlights: [
-        'Currently: United Kingdom (MVP)',
-        'Coming soon: EU countries, Asia, Australia',
-        'Localized road signs and rules',
-        'Currency and measurement conversions',
-      ],
-      color: 'from-accent to-orange-500',
-    },
-    {
-      icon: Zap,
-      title: 'Adaptive Learning',
-      description: 'Intelligent algorithms personalize your learning path based on your performance.',
-      highlights: [
-        'Real-time difficulty adjustment',
-        'Smart content recommendations',
-        'Weak area reinforcement',
-        'Optimal learning pace',
-      ],
-      color: 'from-primary to-accent',
+      icon: BookOpen,
+      title: "Interactive Flashcards",
+      description:
+        "Over 400 flashcards designed to reinforce memory through repetition and active recall.",
     },
     {
       icon: BarChart3,
-      title: 'Progress Tracking',
-      description: 'Monitor your learning journey with comprehensive analytics.',
-      highlights: [
-        'Module completion rates',
-        'Mastery level per topic',
-        'Time spent learning',
-        'Strength and weakness heatmaps',
-      ],
-      color: 'from-secondary to-primary',
+      title: "Progress Tracking",
+      description:
+        "Visual completion indicators help you focus on weak areas and track mastery across all topics.",
     },
     {
-      icon: Lock,
-      title: 'Offline Access',
-      description: 'Download modules and learn anywhere, anytime without internet.',
-      highlights: [
-        'Download entire modules for offline use',
-        'Sync progress when reconnected',
-        'Lightweight app size',
-        'Works on flight mode',
-      ],
-      color: 'from-orange-500 to-accent',
+      icon: ClipboardCheck,
+      title: "Realistic Theory Tests",
+      description:
+        "Practice with quick, standard, and comprehensive mock exams that simulate real test conditions.",
     },
-  ]
-
-  const comparisons = [
-    { feature: 'Total Flashcards', fargeaux: '424+', competitors: '100-200' },
-    { feature: 'Interactive Maps', fargeaux: '12', competitors: '0-3' },
-    { feature: 'Learning Modules', fargeaux: '26', competitors: '10-15' },
-    { feature: 'Offline Support', fargeaux: 'Yes', competitors: 'Limited' },
-    { feature: 'Adaptive Learning', fargeaux: 'Yes', competitors: 'No' },
-    { feature: 'Community Features', fargeaux: 'Yes', competitors: 'No' },
   ]
 
   return (
-    <main className="pt-20">
-      {/* Header */}
-      <section className="py-20 bg-gradient-to-br from-primary/5 to-secondary/5 border-b border-slate-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="font-poppins font-800 text-5xl md:text-6xl text-foreground mb-4 text-balance">
-              Comprehensive Learning <span className="text-primary">Features</span>
-            </h1>
-            <p className="text-xl text-slate-600 max-w-2xl mx-auto text-balance">
-              Everything you need to master foreign road rules with confidence.
+    <main className="relative bg-gradient-to-b from-slate-50 via-white to-slate-50 text-slate-800 overflow-hidden">
+
+      <div className="absolute inset-0 bg-[url('/patterns/noise.png')] opacity-[0.03] pointer-events-none" />
+
+      {/* HERO */}
+      <section className="relative py-32 md:py-40">
+        <div className="max-w-5xl mx-auto px-6 text-center">
+
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.9 }}
+          >
+            <p className="text-teal-600 text-xs font-semibold tracking-widest uppercase mb-4">
+              About The App
             </p>
+
+            {/* Reduced size */}
+            <h1 className="font-poppins font-semibold text-3xl md:text-5xl leading-[1.05] mb-6 text-slate-900">
+              A Modern Way to Master
+              <span className="block text-teal-600">UK Driving Theory</span>
+            </h1>
+
+            <p className="text-base md:text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
+              Built for clarity, focus, and efficiency — this platform helps learners
+              confidently understand UK road rules through structured modules,
+              interactive flashcards, and realistic theory testing.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* FEATURES GRID */}
+      <section className="relative pb-32">
+        <div className="max-w-6xl mx-auto px-6">
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+
+            {features.map((feature, i) => {
+              const Icon = feature.icon
+
+              return (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: i * 0.1 }}
+                  className="group relative bg-white rounded-3xl p-10 border border-slate-200
+                             hover:border-orange-500/40 transition-all duration-500
+                             shadow-sm hover:shadow-[0px_20px_60px_rgba(0,0,0,0.06)]
+                             hover:-translate-y-1 hover:scale-[1.015]"
+                >
+                  {/* Hover gradient glow changed to orange */}
+                  <div className="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition-all duration-500
+                                  bg-gradient-to-br from-orange-100/30 via-transparent to-orange-200/30 pointer-events-none" />
+
+                  {/* Icon */}
+                  <div className="relative w-14 h-14 flex items-center justify-center mb-6
+                                  rounded-xl bg-slate-50 border border-slate-200
+                                  transition-all duration-300 group-hover:border-orange-500/40">
+                    <Icon className="w-6 h-6 text-teal-600/80 group-hover:text-orange-500 transition-all duration-300" />
+                  </div>
+
+                  <h3 className="font-poppins text-xl font-semibold text-slate-900 mb-3">
+                    {feature.title}
+                  </h3>
+
+                  <p className="text-sm md:text-base text-slate-600 leading-relaxed">
+                    {feature.description}
+                  </p>
+                </motion.div>
+              )
+            })}
           </div>
         </div>
       </section>
 
-      {/* Detailed Features */}
-      <section className="py-20 md:py-32 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-20">
-          {detailedFeatures.map((feature, index) => {
-            const Icon = feature.icon
-            const isEven = index % 2 === 0
+      {/* EXPERIENCE SECTION */}
+      <section className="relative py-32 bg-slate-50">
+        <div className="max-w-4xl mx-auto px-6 text-center">
 
-            return (
-              <div key={index} className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                {/* Left: Visual */}
-                <div className={`relative h-96 flex items-center justify-center ${!isEven && 'lg:order-last'}`}>
-                  <div className={`absolute inset-0 bg-gradient-to-br ${feature.color} rounded-3xl opacity-10 blur-2xl`} />
-                  <div className={`relative w-72 h-72 bg-gradient-to-br ${feature.color} rounded-3xl shadow-2xl flex items-center justify-center`}>
-                    <Icon size={80} className="text-white" />
-                  </div>
-                </div>
-
-                {/* Right: Content */}
-                <div className="space-y-6">
-                  <div>
-                    <h2 className="font-poppins font-800 text-3xl md:text-4xl text-foreground mb-3">
-                      {feature.title}
-                    </h2>
-                    <p className="text-lg text-slate-600 leading-relaxed">
-                      {feature.description}
-                    </p>
-                  </div>
-
-                  <ul className="space-y-3">
-                    {feature.highlights.map((highlight, i) => (
-                      <li key={i} className="flex items-start gap-3">
-                        <Check size={20} className="text-primary flex-shrink-0 mt-0.5" />
-                        <span className="text-slate-600">{highlight}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            )
-          })}
-        </div>
-      </section>
-
-      {/* Stats & Comparison */}
-      <section className="py-20 md:py-32 bg-slate-50 border-t border-border">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Comparison Table */}
-          <div className="mb-16">
-            <h2 className="font-poppins font-800 text-3xl md:text-4xl text-center text-foreground mb-12">
-              Why Fargeaux Stands Out
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            {/* Slightly reduced */}
+            <h2 className="font-poppins font-semibold text-3xl md:text-4xl text-slate-900 mb-6 leading-[1.1]">
+              Designed for Focused,
+              <span className="block">Efficient Progress</span>
             </h2>
 
-            <div className="bg-white rounded-2xl border border-slate-200 overflow-hidden">
-              <div className="overflow-x-auto">
-                <table className="w-full">
-                  <thead>
-                    <tr className="bg-gradient-to-r from-primary to-secondary text-white">
-                      <th className="px-6 py-4 text-left font-poppins font-bold">Feature</th>
-                      <th className="px-6 py-4 text-left font-poppins font-bold">Fargeaux</th>
-                      <th className="px-6 py-4 text-left font-poppins font-bold">Other Apps</th>
-                    </tr>
-                  </thead>
-                  <tbody className="divide-y divide-slate-200">
-                    {comparisons.map((row, index) => (
-                      <tr key={index} className="hover:bg-slate-50 transition-colors">
-                        <td className="px-6 py-4 font-medium text-foreground">{row.feature}</td>
-                        <td className="px-6 py-4 text-primary font-semibold">{row.fargeaux}</td>
-                        <td className="px-6 py-4 text-slate-600">{row.competitors}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-
-          {/* CTA */}
-          <div className="bg-gradient-to-r from-primary to-secondary text-white rounded-2xl p-8 md:p-12 text-center">
-            <h3 className="font-poppins font-bold text-2xl md:text-3xl mb-4">
-              Experience All Features Free for 24 Hours
-            </h3>
-            <p className="text-white/90 mb-6">
-              No credit card required. Full access to all features, modules, and flashcards.
+            <p className="text-base md:text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto">
+              Clean layouts, smooth transitions, and distraction-free interfaces
+              keep your attention on what matters most — understanding UK road
+              safety principles and preparing effectively for your theory exam.
             </p>
-            <Button size="lg" className="bg-accent text-primary hover:bg-orange-500 gap-2">
-              Start Free Trial
-              <ArrowRight size={20} />
-            </Button>
-          </div>
+          </motion.div>
         </div>
       </section>
+
     </main>
   )
 }
