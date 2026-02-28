@@ -1,142 +1,126 @@
 'use client'
 
-import { useState } from 'react'
-import { Card } from '@/components/ui/card'
-import { Button } from '@/components/ui/button'
-import { Check, ArrowRight } from 'lucide-react'
+import { Check } from 'lucide-react'
 
-export default function PricingClient() {
-  const [selectedPlan, setSelectedPlan] = useState<string | null>(null)
-
-  const handlePurchase = () => {
-    if (!selectedPlan) {
-      alert('Please select a plan to continue.')
-      return
-    }
-
-    const confirmPurchase = confirm(
-      `You selected the ${selectedPlan} plan. Continue to demo purchase?`
-    )
-
-    if (confirmPurchase) {
-      alert('Demo purchase successful! 🎉 Welcome to Fargeaux Premium.')
-    }
-  }
-
+export default function PricingPage() {
   const plans = [
     {
-      name: 'Free Trial',
-      duration: '24 hours',
-      price: '$0',
-      description: 'Perfect for exploring Fargeaux',
+      name: 'Basic Package',
+      price: '$79 AUD',
+      description: 'Complete access to all core learning materials',
       features: [
-        'Full access to all 26 modules',
-        '424 flashcards included',
-        '12 training maps',
-        'Progress tracking',
-        'Offline downloads',
-        'No credit card required',
-        'Cancel anytime',
+        'All 26 modules',
+        '12 practice maps',
+        'Theory test preparation',
+        'Progress saving',
+        '424 flashcards',
       ],
-      highlighted: true,
+      recommended: false,
     },
     {
-      name: 'Monthly',
-      duration: 'per month',
-      price: '$9.99',
-      description: 'Great for quick trips',
+      name: 'Premium Package',
+      price: '$119 AUD',
+      description: 'Unlock advanced tools and priority support',
       features: [
-        'All features from Free Trial',
-        'Unlimited learning access',
-        'Ad-free experience',
-        'New country modules monthly',
-        'Priority email support',
-        '30-day money-back guarantee',
-        'Cancel anytime',
+        'Everything in Basic',
+        'Interactive mini-games',
+        'Advanced practice scenarios',
+        'Priority support',
+        'Bonus study materials',
       ],
-      highlighted: false,
-    },
-    {
-      name: 'Annual',
-      duration: 'per year',
-      price: '$79.99',
-      description: 'Best value for travelers',
-      features: [
-        'All features from Monthly',
-        'Advanced analytics dashboard',
-        'Early access to new countries',
-        '24/7 priority support',
-        'Exclusive community access',
-        'Annual roadmap voting rights',
-        'Family sharing (up to 5 users)',
-      ],
-      highlighted: true,
+      recommended: true,
     },
   ]
 
   return (
-    <main className="pt-20">
-      <section className="py-20 md:py-32 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          
-          {/* Pricing Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-            {plans.map((plan, index) => (
-              <div
-                key={index}
-                onClick={() => setSelectedPlan(plan.name)}
-                className="cursor-pointer transition-all duration-300"
-              >
-                <Card
-                  className={`h-full p-8 flex flex-col border-2 transition-all duration-300
-                    ${
-                      selectedPlan === plan.name
-                        ? 'border-primary shadow-2xl bg-primary/5 scale-105'
-                        : plan.highlighted
-                        ? 'border-primary'
-                        : 'border-slate-200 hover:border-primary/30'
-                    }`}
-                >
-                  <div className="mb-6">
-                    <h3 className="font-poppins font-bold text-2xl text-foreground mb-2">
-                      {plan.name}
-                    </h3>
-                    <p className="text-slate-600 text-sm">
-                      {plan.description}
-                    </p>
-                  </div>
+    <section className="relative bg-white pt-16 md:pt-20 pb-28 overflow-hidden">
 
-                  <div className="mb-6">
-                    <span className="font-poppins font-extrabold text-5xl text-primary">
-                      {plan.price}
-                    </span>
-                    <span className="text-slate-600 text-sm">
-                      {' '}
-                      {plan.duration}
-                    </span>
-                  </div>
+      <div className="max-w-7xl mx-auto px-6 lg:px-8">
 
-                  <ul className="space-y-3 flex-1">
-                    {plan.features.map((feature, i) => (
-                      <li key={i} className="flex items-start gap-3">
-                        <Check
-                          size={20}
-                          className="text-primary flex-shrink-0 mt-0.5"
-                        />
-                        <span className="text-slate-700 text-sm">
-                          {feature}
-                        </span>
-                      </li>
-                    ))}
-                  </ul>
-                </Card>
-              </div>
-            ))}
-          </div>
+        {/* Header */}
+        <div className="text-center max-w-2xl mx-auto mb-20">
 
-          
+          {/* Thin Accent Line */}
+          <div className="h-[1px] w-24 mx-auto bg-gradient-to-r from-orange-300/40 via-orange-500/70 to-orange-300/40 mb-6" />
+
+          <p className="text-primary text-xs tracking-widest uppercase font-medium">
+            Pricing Plans
+          </p>
+
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold text-gray-900 leading-tight mt-4">
+            Choose Your <span className="text-primary">Package</span>
+          </h1>
+
+          <p className="text-gray-600 text-[15px] leading-relaxed mt-6">
+            Simple, transparent pricing designed to support your road learning journey.
+          </p>
         </div>
-      </section>
-    </main>
+
+        {/* Pricing Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
+
+          {plans.map((plan, index) => (
+            <div
+              key={index}
+              className="relative group transition-all duration-500"
+            >
+              <div
+                className={`
+                  relative p-12 rounded-[2rem] border bg-white
+                  transition-all duration-500 ease-out
+                  hover:-translate-y-3 hover:shadow-2xl
+                  ${plan.recommended
+                    ? 'border-primary shadow-lg'
+                    : 'border-gray-200'}
+                `}
+              >
+                {/* Recommended Badge */}
+                {plan.recommended && (
+                  <div className="absolute -top-4 right-8 bg-primary text-white text-xs font-medium px-4 py-1 rounded-full shadow-md">
+                    Recommended
+                  </div>
+                )}
+
+                <div className="mb-8">
+                  <h3 className="text-2xl font-semibold text-gray-900 mb-3">
+                    {plan.name}
+                  </h3>
+                  <p className="text-gray-600 text-sm">
+                    {plan.description}
+                  </p>
+                </div>
+
+                <div className="mb-10">
+                  <span className="text-5xl font-semibold text-primary tracking-tight">
+                    {plan.price}
+                  </span>
+                </div>
+
+                <ul className="space-y-5">
+                  {plan.features.map((feature, i) => (
+                    <li key={i} className="flex items-start gap-4">
+                      <Check
+                        size={20}
+                        className="text-primary mt-1 flex-shrink-0"
+                      />
+                      <span className="text-gray-700 text-sm">
+                        {feature}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+
+              </div>
+            </div>
+          ))}
+
+        </div>
+      </div>
+
+      {/* Background Accents (matching Hero) */}
+      <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 blur-3xl rounded-full -z-10" />
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-primary/5 blur-3xl rounded-full -z-10" />
+
+    </section>
   )
 }
