@@ -6,18 +6,23 @@ export default function ProblemProSection() {
       icon: AlertTriangle,
       value: '3x',
       label: 'Higher Crash Risk',
-      description: 'Drivers unfamiliar with foreign road rules face significantly higher accident rates in the first month'
+      description:
+        'Tourists are 3x more likely to crash than locals (UK Foreign & Commonwealth Office).',
     },
     {
       icon: TrendingUp,
       value: '31%',
       label: 'Wrong-Side Driving',
-      description: 'A third of international drivers struggle with opposite-side driving initially, causing dangerous situations'
-    }
+      description:
+        '31% of tourists admit driving on the wrong side abroad (FCO Survey).',
+    },
   ]
 
   return (
-    <section className="relative w-full py-16 md:py-24 overflow-hidden bg-gradient-to-b from-slate-50 via-orange-50/40 to-white">
+    <section
+      id="features"
+      className="relative w-full py-16 md:py-24 overflow-hidden bg-gradient-to-b from-slate-50 via-orange-50/40 to-white"
+    >
       
       {/* Ambient Background Glows */}
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-orange-400/10 blur-3xl rounded-full -z-10" />
@@ -76,15 +81,15 @@ export default function ProblemProSection() {
           <h3 className="font-poppins font-bold text-2xl md:text-3xl text-gray-900 mb-6 md:mb-8">
             What Most Drivers Struggle With
           </h3>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
             {[
-              'Memorizing hundreds of traffic signs and their meanings',
+              'Interpreting hundreds of traffic signs and their meanings',
               'Understanding speed limits and road-specific regulations',
               'Learning how to navigate different driving conventions',
               'Practicing emergency responses to unfamiliar road scenarios',
               'Adapting to local driving behaviors and safety standards',
-              'Retaining complex rules under real-world driving conditions'
+              'Retaining complex rules under real-world driving conditions',
             ].map((problem, idx) => (
               <div key={idx} className="flex gap-3 md:gap-4">
                 <div className="flex-shrink-0 mt-1">

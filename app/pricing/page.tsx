@@ -5,6 +5,21 @@ import { Check } from 'lucide-react'
 export default function PricingPage() {
   const plans = [
     {
+      name: 'Free Trial',
+      price: '$0 AUD',
+      description: 'Try the platform before upgrading',
+      features: [
+        'Full access to all 26 modules',
+        '424 flashcards included',
+        '12 training maps',
+        'Progress tracking',
+        'Offline downloads',
+        'No credit card required',
+        'Cancel anytime',
+      ],
+      recommended: false,
+    },
+    {
       name: 'Basic Package',
       price: '$79 AUD',
       description: 'Complete access to all core learning materials',
@@ -33,42 +48,41 @@ export default function PricingPage() {
   ]
 
   return (
-    <section className="relative bg-white pt-16 md:pt-20 pb-28 overflow-hidden">
+    <section className="relative bg-white pt-16 pb-24">
 
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
 
         {/* Header */}
-        <div className="text-center max-w-2xl mx-auto mb-20">
+        <div className="text-center max-w-2xl mx-auto mb-16">
 
-          {/* Thin Accent Line */}
-          <div className="h-[1px] w-24 mx-auto bg-gradient-to-r from-orange-300/40 via-orange-500/70 to-orange-300/40 mb-6" />
+          <div className="h-[1px] w-20 mx-auto bg-gradient-to-r from-orange-300/40 via-orange-500/70 to-orange-300/40 mb-5" />
 
           <p className="text-primary text-xs tracking-widest uppercase font-medium">
             Pricing Plans
           </p>
 
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold text-gray-900 leading-tight mt-4">
+          {/* Reduced Heading Size */}
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-gray-900 mt-4">
             Choose Your <span className="text-primary">Package</span>
           </h1>
 
-          <p className="text-gray-600 text-[15px] leading-relaxed mt-6">
+          <p className="text-gray-600 text-sm mt-5">
             Simple, transparent pricing designed to support your road learning journey.
           </p>
         </div>
 
         {/* Pricing Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 items-stretch">
 
           {plans.map((plan, index) => (
-            <div
-              key={index}
-              className="relative group transition-all duration-500"
-            >
+            <div key={index} className="flex">
+
               <div
                 className={`
-                  relative p-12 rounded-[2rem] border bg-white
+                  relative w-full p-10 rounded-[2rem] border bg-white
                   transition-all duration-500 ease-out
-                  hover:-translate-y-3 hover:shadow-2xl
+                  hover:-translate-y-2 hover:shadow-xl
+                  flex flex-col
                   ${plan.recommended
                     ? 'border-primary shadow-lg'
                     : 'border-gray-200'}
@@ -81,8 +95,9 @@ export default function PricingPage() {
                   </div>
                 )}
 
-                <div className="mb-8">
-                  <h3 className="text-2xl font-semibold text-gray-900 mb-3">
+                {/* Title */}
+                <div className="mb-6">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
                     {plan.name}
                   </h3>
                   <p className="text-gray-600 text-sm">
@@ -90,20 +105,22 @@ export default function PricingPage() {
                   </p>
                 </div>
 
-                <div className="mb-10">
-                  <span className="text-5xl font-semibold text-primary tracking-tight">
+                {/* Price */}
+                <div className="mb-8">
+                  <span className="text-3xl font-semibold text-primary">
                     {plan.price}
                   </span>
                 </div>
 
-                <ul className="space-y-5">
+                {/* Features */}
+                <ul className="space-y-4 flex-grow">
                   {plan.features.map((feature, i) => (
-                    <li key={i} className="flex items-start gap-4">
+                    <li key={i} className="flex items-start gap-3">
                       <Check
-                        size={20}
+                        size={18}
                         className="text-primary mt-1 flex-shrink-0"
                       />
-                      <span className="text-gray-700 text-sm">
+                      <span className="text-gray-700 text-sm leading-relaxed">
                         {feature}
                       </span>
                     </li>
@@ -117,9 +134,9 @@ export default function PricingPage() {
         </div>
       </div>
 
-      {/* Background Accents (matching Hero) */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 blur-3xl rounded-full -z-10" />
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-primary/5 blur-3xl rounded-full -z-10" />
+      {/* Soft Background Accent */}
+      <div className="absolute top-0 right-0 w-80 h-80 bg-primary/5 blur-3xl rounded-full -z-10" />
+      <div className="absolute bottom-0 left-0 w-80 h-80 bg-primary/5 blur-3xl rounded-full -z-10" />
 
     </section>
   )

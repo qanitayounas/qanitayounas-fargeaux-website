@@ -9,7 +9,7 @@ export default function AboutPage() {
       icon: LayoutDashboard,
       title: "Structured Modules",
       description:
-        "26 carefully organized learning modules covering every essential UK driving topic from road signs to right of way.",
+        "26 carefully organized learning modules covering essential UK driving topics — from left-hand driving fundamentals to road positioning and right of way.",
     },
     {
       icon: BookOpen,
@@ -21,55 +21,86 @@ export default function AboutPage() {
       icon: BarChart3,
       title: "Progress Tracking",
       description:
-        "Visual completion indicators help you focus on weak areas and track mastery across all topics.",
+        "Visual completion indicators help you focus on weak areas and build real confidence before getting behind the wheel.",
     },
     {
       icon: ClipboardCheck,
-      title: "Realistic Theory Tests",
+      title: "Realistic Practice Tests",
       description:
-        "Practice with quick, standard, and comprehensive mock exams that simulate real test conditions.",
+        "Test your understanding with structured mock assessments designed to simulate real-world road scenarios.",
     },
   ]
 
   return (
     <main className="relative bg-gradient-to-b from-slate-50 via-white to-slate-50 text-slate-800 overflow-hidden">
 
-      <div className="absolute inset-0 bg-[url('/patterns/noise.png')] opacity-[0.03] pointer-events-none" />
-
       {/* HERO */}
-      <section className="relative py-32 md:py-40">
+      <section className="pt-20 md:pt-28 pb-16">
         <div className="max-w-5xl mx-auto px-6 text-center">
-
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9 }}
+            transition={{ duration: 0.8 }}
           >
             <p className="text-teal-600 text-xs font-semibold tracking-widest uppercase mb-4">
-              About The App
+              Why Fargeaux Exists
             </p>
 
-            {/* Reduced size */}
-            <h1 className="font-poppins font-semibold text-3xl md:text-5xl leading-[1.05] mb-6 text-slate-900">
-              A Modern Way to Master
-              <span className="block text-teal-600">UK Driving Theory</span>
+            <h1 className="font-poppins font-semibold text-3xl md:text-5xl leading-tight mb-6 text-slate-900">
+              Safer Roads Start With
+              <span className="block text-teal-600">Prepared Drivers</span>
             </h1>
-
-            <p className="text-base md:text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
-              Built for clarity, focus, and efficiency — this platform helps learners
-              confidently understand UK road rules through structured modules,
-              interactive flashcards, and realistic theory testing.
-            </p>
           </motion.div>
         </div>
       </section>
 
+{/* PREMIUM MISSION CONTAINER */}
+<section className="pb-24">
+  <div className="max-w-4xl mx-auto px-6">
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8 }}
+      className="
+        relative
+        rounded-3xl
+        p-10 md:p-14
+        text-center
+        border border-slate-200/60
+        bg-gradient-to-br from-white via-slate-50 to-slate-100/60
+        shadow-[0px_25px_70px_rgba(15,23,42,0.06)]
+        backdrop-blur-sm
+      "
+    >
+      {/* subtle glow accent */}
+      <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-teal-500/5 via-transparent to-orange-500/5 pointer-events-none" />
+
+      <div className="relative">
+        <p className="text-base md:text-lg text-slate-600 leading-relaxed mb-6">
+          Every year, international tourists are killed or seriously injured on UK roads because they weren’t prepared for left-hand driving, unfamiliar road signs, and different road rules.
+        </p>
+
+        <p className="text-base md:text-lg text-slate-600 leading-relaxed mb-8">
+          But it’s not just tourists who pay the price — local residents, cyclists, and pedestrians share those same roads. Beyond road safety, unprepared tourists create friction, frustration, and real harm in the communities they visit.
+        </p>
+
+        <p className="text-xl md:text-2xl font-semibold text-slate-900 mb-4">
+          Fargeaux exists to change that.
+        </p>
+
+        <p className="text-base md:text-lg text-slate-700 leading-relaxed">
+          A prepared tourist is a safer tourist, a more respectful guest, and a better ambassador for travel done right.
+        </p>
+      </div>
+    </motion.div>
+  </div>
+</section>
+
       {/* FEATURES GRID */}
-      <section className="relative pb-32">
+      <section className="pb-32">
         <div className="max-w-6xl mx-auto px-6">
-
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-
             {features.map((feature, i) => {
               const Icon = feature.icon
 
@@ -85,11 +116,9 @@ export default function AboutPage() {
                              shadow-sm hover:shadow-[0px_20px_60px_rgba(0,0,0,0.06)]
                              hover:-translate-y-1 hover:scale-[1.015]"
                 >
-                  {/* Hover gradient glow changed to orange */}
                   <div className="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition-all duration-500
                                   bg-gradient-to-br from-orange-100/30 via-transparent to-orange-200/30 pointer-events-none" />
 
-                  {/* Icon */}
                   <div className="relative w-14 h-14 flex items-center justify-center mb-6
                                   rounded-xl bg-slate-50 border border-slate-200
                                   transition-all duration-300 group-hover:border-orange-500/40">
@@ -107,31 +136,6 @@ export default function AboutPage() {
               )
             })}
           </div>
-        </div>
-      </section>
-
-      {/* EXPERIENCE SECTION */}
-      <section className="relative py-32 bg-slate-50">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-          >
-            {/* Slightly reduced */}
-            <h2 className="font-poppins font-semibold text-3xl md:text-4xl text-slate-900 mb-6 leading-[1.1]">
-              Designed for Focused,
-              <span className="block">Efficient Progress</span>
-            </h2>
-
-            <p className="text-base md:text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto">
-              Clean layouts, smooth transitions, and distraction-free interfaces
-              keep your attention on what matters most — understanding UK road
-              safety principles and preparing effectively for your theory exam.
-            </p>
-          </motion.div>
         </div>
       </section>
 

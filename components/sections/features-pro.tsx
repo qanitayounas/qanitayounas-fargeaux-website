@@ -56,8 +56,18 @@ export default function FeaturesProSection() {
           <h2 className="font-poppins text-4xl md:text-5xl font-semibold text-gray-900 tracking-tight leading-[1.05] whitespace-nowrap">
             Everything You Need to Master Road Rules
           </h2>
+        </div>
 
-          <p className="text-base text-gray-600 mt-2 max-w-2xl mx-auto">
+        {/* Research Card */}
+        <div className="max-w-4xl mx-auto mb-10 p-6 md:p-8 bg-orange-50 border border-orange-200 rounded-xl shadow-md text-center">
+          <p className="text-gray-800 text-base md:text-lg leading-relaxed">
+            Fargeaux is grounded in established cognitive science. Our flashcard and quiz-based learning system draws on spaced repetition research (Kornell, 2009; Kang, 2016) and the testing effect (Roediger & Karpicke, 2006) — methods proven to significantly improve long-term retention compared to passive study. We believe that preparing tourists with knowledge that actually sticks is the most effective form of upstream road safety.
+          </p>
+        </div>
+
+        {/* Optional tagline below card */}
+        <div className="text-center mb-8">
+          <p className="text-base text-gray-600 max-w-2xl mx-auto">
             A focused learning system built for clarity, speed, and long-term retention.
           </p>
         </div>
