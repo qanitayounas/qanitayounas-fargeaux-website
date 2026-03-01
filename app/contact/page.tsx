@@ -1,59 +1,69 @@
 'use client'
 
 import { Card } from '@/components/ui/card'
-import { Mail, MessageSquare, Phone } from 'lucide-react'
+import { Mail, Linkedin, Facebook, Instagram } from 'lucide-react'
 
 export default function ContactPage() {
 
-  const contactMethods = [
+  const emails = [
     {
+      title: 'General Support',
+      desc: 'For questions about the app, your account, technical issues, or anything else. We aim to respond within 24–48 hours.',
+      info: 'support@fargeaux.com',
       icon: Mail,
-      title: 'Email',
-      desc: 'For detailed inquiries',
+    },
+    {
+      title: 'Privacy Enquiries',
+      desc: 'For questions about your data, privacy rights, or our data practices.',
+      info: 'support@fargeaux.com',
+      icon: Mail,
+    },
+    {
+      title: 'Partnerships & Media',
+      desc: 'Interested in partnering with Fargeaux or working on a story about road safety or tourism?',
       info: 'hello@fargeaux.com',
-    },
-    {
-      icon: MessageSquare,
-      title: 'Live Chat',
-      desc: 'Get instant support',
-      info: 'Available 24/7',
-    },
-    {
-      icon: Phone,
-      title: 'Phone',
-      desc: 'Call support',
-      info: '+44 (0) 20 1234 5678',
+      icon: Mail,
     },
   ]
 
+  const socialLinks = [
+    { title: 'LinkedIn', url: 'https://linkedin.com/company/fargeaux', icon: Linkedin },
+    { title: 'Facebook', url: 'https://facebook.com/fargeauxapp', icon: Facebook },
+    { title: 'Instagram', url: 'https://instagram.com/fargeaux.app', icon: Instagram },
+  ]
+
+  const charities = [
+    { name: 'iRAP (International Road Assessment Programme)', url: 'https://irap.org' },
+    { name: 'WWF UK (World Wildlife Fund)', url: 'https://wwf.org.uk' },
+    { name: 'Day One Trauma Support', url: 'https://dayonetrauma.org' },
+  ]
+
   return (
-    <main className="bg-white pt-20">
+    <main className="bg-white pt-16">
 
       {/* HERO */}
-      <section className="pt-14 md:pt-20 pb-16 border-b">
+      <section className="pt-10 md:pt-14 pb-12 border-b">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold text-gray-900 leading-tight">
-            We're Here to <span className="text-primary">Help</span>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-gray-900 leading-tight">
+            Get In <span className="text-primary">Touch</span>
           </h1>
 
-          <p className="text-gray-600 text-[15px] max-w-xl mx-auto mt-4 leading-relaxed">
-            Questions about Fargeaux? Our support team is available anytime to help
-            you learn road rules with confidence.
+          <p className="text-gray-600 text-base md:text-lg max-w-2xl mx-auto mt-3 leading-relaxed">
+            Whether you have a question about the app, need help with your purchase, or just want to say g’day — we’d love to hear from you.
           </p>
         </div>
       </section>
 
-      {/* CONTACT METHODS */}
-      <section className="py-16 md:py-20">
+      {/* EMAIL CONTACTS */}
+      <section className="py-12 md:py-16">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-
           <div className="grid md:grid-cols-3 gap-6">
-            {contactMethods.map((m, i) => {
-              const Icon = m.icon
+            {emails.map((item, i) => {
+              const Icon = item.icon
               return (
                 <Card
                   key={i}
-                  className="p-7 border transition-all duration-300 hover:shadow-md hover:-translate-y-1 group"
+                  className="p-6 md:p-8 border transition-all duration-300 hover:shadow-md hover:-translate-y-1 group"
                 >
                   <div className="space-y-4">
                     <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center transition group-hover:bg-orange-500">
@@ -64,22 +74,23 @@ export default function ContactPage() {
                     </div>
 
                     <h3 className="text-lg font-semibold transition group-hover:text-orange-500">
-                      {m.title}
+                      {item.title}
                     </h3>
 
-                    <p className="text-sm text-gray-500">{m.desc}</p>
+                    <p className="text-sm text-gray-500">{item.desc}</p>
 
                     <p className="font-medium text-primary transition group-hover:text-orange-500">
-                      {m.info}
+                      {item.info}
                     </p>
                   </div>
                 </Card>
               )
             })}
           </div>
-
         </div>
       </section>
+
+      
 
     </main>
   )
