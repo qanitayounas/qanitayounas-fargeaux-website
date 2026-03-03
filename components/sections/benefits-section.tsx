@@ -4,22 +4,22 @@ export default function BenefitsSection() {
   const benefits = [
     {
       title: 'Confidence Behind the Wheel',
-      description: 'Know exactly what to expect. Master road rules before you arrive, eliminating uncertainty and stress.',
+      description: "We cannot promise exact outcomes. Master road rules before you arrive to reduce uncertainty and stress.",
       gradient: 'from-blue-200 to-blue-400',
     },
     {
       title: 'Explore Without Fear',
-      description: 'Focus on enjoying your trip, not worrying about breaking traffic laws. Drive safely on any road.',
+      description: "Drive safer on any road. Focus on enjoying your trip without worrying about breaking traffic laws.",
       gradient: 'from-purple-200 to-purple-400',
     },
     {
       title: 'Memory That Sticks',
-      description: 'Our scientifically-proven spaced repetition ensures you remember rules when you need them most.',
+      description: "Our scientifically-proven spaced repetition helps you remember rules when you need them most.",
       gradient: 'from-teal-200 to-teal-400',
     },
     {
       title: 'Safety First Always',
-      description: 'Every module is research-backed and designed to prevent accidents. Your safety is our priority.',
+      description: "Modules are research-backed to support safer driving. While we cannot guarantee complete safety, your preparation matters.",
       gradient: 'from-orange-200 to-orange-400',
     },
   ]

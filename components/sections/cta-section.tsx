@@ -11,7 +11,7 @@ export default function CTASection() {
   ]
 
   return (
-    <section className="relative py-12 md:py-16 bg-gradient-to-br from-primary/80 to-secondary/80 text-white overflow-hidden">
+    <section className="relative py-12 md:py-16 bg-gradient-to-br from-primary/80 to-secondary/80 text-black overflow-hidden">
       {/* Decorative soft circles */}
       <div className="absolute top-10 right-16 w-36 h-36 bg-white/10 rounded-full blur-3xl" />
       <div className="absolute bottom-16 left-16 w-48 h-48 bg-accent/20 rounded-full blur-3xl" />
@@ -23,10 +23,10 @@ export default function CTASection() {
 
         {/* Header */}
         <div className="text-center mb-8 animate-slide-in-up">
-          <h2 className="font-poppins font-800 text-3xl md:text-4xl mb-2 text-white">
+          <h2 className="font-poppins font-800 text-3xl md:text-4xl mb-2 text-black">
             Ready to Drive Safely?
           </h2>
-          <p className="text-base md:text-lg text-white/90 max-w-2xl mx-auto">
+          <p className="text-base md:text-lg text-black/90 max-w-2xl mx-auto">
             Start your journey to confident driving. No credit card required.
           </p>
         </div>
@@ -37,16 +37,16 @@ export default function CTASection() {
 
             {/* Left: CTA Info */}
             <div className="space-y-3">
-              <p className="text-white/70 text-xs font-medium tracking-wider uppercase">
+              <p className="text-black/70 text-xs font-medium tracking-wider uppercase">
                 START YOUR FREE TRIAL
               </p>
-              <h3 className="font-poppins font-bold text-2xl md:text-3xl text-white">
+              <h3 className="font-poppins font-bold text-2xl md:text-3xl text-black">
                 24 Hours of Complete Access
               </h3>
-              <p className="text-white/80 text-sm md:text-base leading-snug">
+              <p className="text-black/80 text-sm md:text-base leading-snug">
                 No credit card, no hidden fees, no commitment. Everything included.
               </p>
-              <p className="text-xs text-white/60 mt-1">
+              <p className="text-xs text-black/60 mt-1">
                 ✓ Instant access · ✓ 24-hour trial period · ✓ Cancel anytime
               </p>
             </div>
@@ -56,9 +56,10 @@ export default function CTASection() {
               {trialFeatures.map((feature, index) => (
                 <div key={index} className="flex items-center gap-2 md:gap-3">
                   <div className="w-4 h-4 md:w-5 md:h-5 rounded-full bg-accent/30 flex items-center justify-center flex-shrink-0">
-                    <Check size={12} className="text-accent" />
+                    {/* Tick inside made more prominent */}
+                    <Check size={12} className="text-accent/90 font-bold" />
                   </div>
-                  <span className="text-white/90 text-xs md:text-sm">{feature}</span>
+                  <span className="text-black/90 text-xs md:text-sm">{feature}</span>
                 </div>
               ))}
             </div>
