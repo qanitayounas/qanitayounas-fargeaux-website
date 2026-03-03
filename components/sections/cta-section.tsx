@@ -2,11 +2,10 @@ import { Check } from 'lucide-react'
 
 export default function CTASection() {
   const trialFeatures = [
-    'Full access to all 26 learning modules',
-    '424 comprehensive flashcards',
-    '12 interactive training maps',
-    'Offline download capability',
-    'Progress tracking & analytics',
+    'Access to 3 starter learning modules',
+    '50 sample flashcards',
+    '3 sample interactive map',
+    '24-hour limited access',
     'No credit card required',
   ]
 
@@ -41,10 +40,10 @@ export default function CTASection() {
                 START YOUR FREE TRIAL
               </p>
               <h3 className="font-poppins font-bold text-2xl md:text-3xl text-black">
-                24 Hours of Complete Access
+                24 Hours of Limited Access
               </h3>
               <p className="text-black/80 text-sm md:text-base leading-snug">
-                No credit card, no hidden fees, no commitment. Everything included.
+                Test the platform before you commit. Access to core starter materials included.
               </p>
               <p className="text-xs text-black/60 mt-1">
                 ✓ Instant access · ✓ 24-hour trial period · ✓ Cancel anytime

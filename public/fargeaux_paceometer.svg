@@ -1,0 +1,181 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1100" width="1000" height="1100">
+  <defs>
+    <radialGradient id="bgGrad" cx="50%" cy="45%" r="60%">
+      <stop offset="0%" stop-color="#3d5066"/>
+      <stop offset="100%" stop-color="#2a3545"/>
+    </radialGradient>
+    <radialGradient id="dialFace" cx="45%" cy="40%" r="55%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="80%" stop-color="#f1f5f9"/>
+      <stop offset="100%" stop-color="#e2e8f0"/>
+    </radialGradient>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="10" flood-color="#000" flood-opacity="0.35"/>
+    </filter>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feFlood flood-color="#F97316" flood-opacity="0.4"/>
+      <feComposite in2="blur" operator="in"/>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <marker id="arrow" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#94a3b8"/>
+    </marker>
+    <marker id="arrow_mint" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#2DD4BF"/>
+    </marker>
+    <marker id="arrow_orange" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#F97316"/>
+    </marker>
+    <marker id="arrow_white" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <rect width="1000" height="1100" fill="url(#bgGrad)" rx="16"/>
+
+  <text x="500" y="55" text-anchor="middle" font-family="'Trebuchet MS', 'Segoe UI', sans-serif" font-size="30" font-weight="700" fill="#2DD4BF" letter-spacing="5">THE PACEOMETER</text>
+  <text x="500" y="82" text-anchor="middle" font-family="'Trebuchet MS', sans-serif" font-size="13" fill="#94a3b8" letter-spacing="2.5">HOW MANY MINUTES TO TRAVEL 10 MILES (16 KM) AT EACH SPEED</text>
+
+
+  <g filter="url(#shadow)">
+    <circle cx="500" cy="480" r="320" fill="#334155"/>
+    <circle cx="500" cy="480" r="315" fill="#0D9488" opacity="0.85"/>
+    <circle cx="500" cy="480" r="275" fill="#334155"/>
+    <circle cx="500" cy="480" r="270" fill="#3d5066"/>
+    <circle cx="500" cy="480" r="245" fill="none" stroke="#334155" stroke-width="1"/>
+    <circle cx="500" cy="480" r="240" fill="url(#dialFace)"/>
+    <circle cx="500" cy="480" r="240" fill="none" stroke="#cbd5e1" stroke-width="1.5"/>
+
+    <line x1="297.2" y1="534.4" x2="277.8" y2="539.5" stroke="#334155" stroke-width="2.5" stroke-linecap="round"/>
+    <text x="326.1" y="526.6" text-anchor="middle" dominant-baseline="central" font-family="'Trebuchet MS', sans-serif" font-size="26" font-weight="700" fill="#334155">10</text>
+    <text x="253.7" y="546.0" text-anchor="middle" dominant-baseline="central" font-family="'Trebuchet MS', sans-serif" font-size="12" font-weight="600" fill="#2DD4BF">16</text>
+    <text x="200.6" y="560.2" text-anchor="middle" dominant-baseline="central" font-family="'Trebuchet MS', sans-serif" font-size="19" font-weight="700" fill="#ffffff">60</text>
+    <line x1="297.2" y1="425.6" x2="277.8" y2="420.5" stroke="#334155" stroke-width="2.5" stroke-linecap="round"/>
+    <text x="326.1" y="433.4" text-anchor="middle" dominant-baseline="central" font-family="'Trebuchet MS', sans-serif" font-size="26" font-weight="700" fill="#334155">20</text>
+    <text x="253.7" y="414.0" text-anchor="middle" dominant-baseline="central" font-family="'Trebuchet MS', sans-serif" font-size="12" font-weight="600" fill="#2DD4BF">32</text>
+    <text x="200.6" y="399.8" text-anchor="middle" dominant-baseline="central" font-family="'Trebuchet MS', sans-serif" font-size="19" font-weight="700" fill="#ffffff">30</text>
+    <line x1="351.5" y1="331.5" x2="337.4" y2="317.4" stroke="#334155" stroke-width="2.5" stroke-linecap="round"/>
+    <text x="372.7" y="352.7" text-anchor="middle" dominant-baseline="central" font-family="'Trebuchet MS', sans-serif" font-size="26" font-weight="700" fill="#334155">30</text>
+    <text x="319.7" y="299.7" text-anchor="middle" dominant-baseline="central" font-family="'Trebuchet MS', sans-serif" font-size="12" font-weight="600" fill="#2DD4BF">48</text>
+    <text x="280.8" y="260.8" text-anchor="middle" dominant-baseline="central" font-family="'Trebuchet MS', sans-serif" font-size="19" font-weight="700" fill="#ffffff">20</text>
+    <line x1="445.6" y1="277.2" x2="440.5" y2="257.8" stroke="#334155" stroke-width="2.5" stroke-linecap="round"/>
+    <text x="453.4" y="306.1" text-anchor="middle" dominant-baseline="central" font-family="'Trebuchet MS', sans-serif" font-size="26" font-weight="700" fill="#334155">40</text>
+    <text x="434.0" y="233.7" text-anchor="middle" dominant-baseline="central" font-family="'Trebuchet MS', sans-serif" font-size="12" font-weight="600" fill="#2DD4BF">64</text>
+    <text x="419.8" y="180.6" text-anchor="middle" dominant-baseline="central" font-family="'Trebuchet MS', sans-serif" font-size="19" font-weight="700" fill="#ffffff">15</text>
+    <line x1="554.4" y1="277.2" x2="559.5" y2="257.8" stroke="#334155" stroke-width="2.5" stroke-linecap="round"/>
+    <text x="546.6" y="306.1" text-anchor="middle" dominant-baseline="central" font-family="'Trebuchet MS', sans-serif" font-size="26" font-weight="700" fill="#334155">50</text>
+    <text x="566.0" y="233.7" text-anchor="middle" dominant-baseline="central" font-family="'Trebuchet MS', sans-serif" font-size="12" font-weight="600" fill="#2DD4BF">80</text>
+    <text x="580.2" y="180.6" text-anchor="middle" dominant-baseline="central" font-family="'Trebuchet MS', sans-serif" font-size="19" font-weight="700" fill="#ffffff">12</text>
+    <line x1="648.5" y1="331.5" x2="662.6" y2="317.4" stroke="#334155" stroke-width="2.5" stroke-linecap="round"/>
+    <text x="627.3" y="352.7" text-anchor="middle" dominant-baseline="central" font-family="'Trebuchet MS', sans-serif" font-size="26" font-weight="700" fill="#334155">60</text>
+    <text x="680.3" y="299.7" text-anchor="middle" dominant-baseline="central" font-family="'Trebuchet MS', sans-serif" font-size="12" font-weight="600" fill="#2DD4BF">97</text>
+    <text x="719.2" y="260.8" text-anchor="middle" dominant-baseline="central" font-family="'Trebuchet MS', sans-serif" font-size="19" font-weight="700" fill="#ffffff">10</text>
+    <line x1="702.8" y1="425.6" x2="722.2" y2="420.5" stroke="#334155" stroke-width="2.5" stroke-linecap="round"/>
+    <text x="673.9" y="433.4" text-anchor="middle" dominant-baseline="central" font-family="'Trebuchet MS', sans-serif" font-size="26" font-weight="700" fill="#334155">70</text>
+    <text x="746.3" y="414.0" text-anchor="middle" dominant-baseline="central" font-family="'Trebuchet MS', sans-serif" font-size="12" font-weight="600" fill="#2DD4BF">113</text>
+    <text x="799.4" y="399.8" text-anchor="middle" dominant-baseline="central" font-family="'Trebuchet MS', sans-serif" font-size="19" font-weight="700" fill="#ffffff">8.6</text>
+    <line x1="702.8" y1="534.4" x2="722.2" y2="539.5" stroke="#334155" stroke-width="2.5" stroke-linecap="round"/>
+    <text x="673.9" y="526.6" text-anchor="middle" dominant-baseline="central" font-family="'Trebuchet MS', sans-serif" font-size="26" font-weight="700" fill="#334155">80</text>
+    <text x="746.3" y="546.0" text-anchor="middle" dominant-baseline="central" font-family="'Trebuchet MS', sans-serif" font-size="12" font-weight="600" fill="#2DD4BF">129</text>
+    <text x="799.4" y="560.2" text-anchor="middle" dominant-baseline="central" font-family="'Trebuchet MS', sans-serif" font-size="19" font-weight="700" fill="#ffffff">7.5</text>
+    <line x1="648.5" y1="628.5" x2="662.6" y2="642.6" stroke="#334155" stroke-width="2.5" stroke-linecap="round"/>
+    <text x="627.3" y="607.3" text-anchor="middle" dominant-baseline="central" font-family="'Trebuchet MS', sans-serif" font-size="26" font-weight="700" fill="#334155">90</text>
+    <text x="680.3" y="660.3" text-anchor="middle" dominant-baseline="central" font-family="'Trebuchet MS', sans-serif" font-size="12" font-weight="600" fill="#2DD4BF">145</text>
+    <text x="719.2" y="699.2" text-anchor="middle" dominant-baseline="central" font-family="'Trebuchet MS', sans-serif" font-size="19" font-weight="700" fill="#ffffff">6.7</text>
+    <line x1="313.8" y1="587.5" x2="305.1" y2="592.5" stroke="#334155" stroke-width="1" stroke-linecap="round" opacity="0.5"/>
+    <line x1="285.0" y1="480.0" x2="275.0" y2="480.0" stroke="#334155" stroke-width="1" stroke-linecap="round" opacity="0.5"/>
+    <line x1="313.8" y1="372.5" x2="305.1" y2="367.5" stroke="#334155" stroke-width="1" stroke-linecap="round" opacity="0.5"/>
+    <line x1="392.5" y1="293.8" x2="387.5" y2="285.1" stroke="#334155" stroke-width="1" stroke-linecap="round" opacity="0.5"/>
+    <line x1="500.0" y1="265.0" x2="500.0" y2="255.0" stroke="#334155" stroke-width="1" stroke-linecap="round" opacity="0.5"/>
+    <line x1="607.5" y1="293.8" x2="612.5" y2="285.1" stroke="#334155" stroke-width="1" stroke-linecap="round" opacity="0.5"/>
+    <line x1="686.2" y1="372.5" x2="694.9" y2="367.5" stroke="#334155" stroke-width="1" stroke-linecap="round" opacity="0.5"/>
+    <line x1="715.0" y1="480.0" x2="725.0" y2="480.0" stroke="#334155" stroke-width="1" stroke-linecap="round" opacity="0.5"/>
+    <line x1="686.2" y1="587.5" x2="694.9" y2="592.5" stroke="#334155" stroke-width="1" stroke-linecap="round" opacity="0.5"/>
+    <line x1="351.5" y1="628.5" x2="337.4" y2="642.6" stroke="#334155" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M 336.0,316.0 A 232,232 0 0,0 700.9,364.0" fill="none" stroke="#2DD4BF" stroke-width="5" opacity="0.35" stroke-linecap="round"/>
+    <path d="M 700.9,364.0 A 232,232 0 0,0 664.0,644.0" fill="none" stroke="#F97316" stroke-width="5" opacity="0.45" stroke-linecap="round"/>
+
+    <circle cx="500" cy="480" r="45" fill="#334155"/>
+    <circle cx="500" cy="480" r="39" fill="#3d5066"/>
+
+    <polygon points="677.5,377.5 497.0,474.8 478.3,492.5 503.0,485.2" fill="#F97316" filter="url(#glow)"/>
+    <circle cx="500" cy="480" r="10" fill="#F97316"/>
+    <circle cx="500" cy="480" r="5" fill="#ffffff"/>
+
+    <text x="500" y="560" text-anchor="middle" font-family="'Trebuchet MS', sans-serif" font-size="15" font-weight="700" fill="#334155" letter-spacing="4">MPH</text>
+    <text x="500" y="578" text-anchor="middle" font-family="'Trebuchet MS', sans-serif" font-size="15" font-weight="700" fill="#2DD4BF" letter-spacing="4">KM/H</text>
+    <text x="500" y="596" text-anchor="middle" font-family="'Trebuchet MS', sans-serif" font-size="11" font-weight="600" fill="#94a3b8" letter-spacing="2">SPEED</text>
+  </g>
+
+
+  <!-- White numbers callout - top left -->
+  <g>
+    <rect x="20" y="100" width="230" height="50" rx="8" fill="#334155" stroke="#ffffff" stroke-width="1.5" opacity="0.92"/>
+    <circle cx="40" cy="125" r="8" fill="#ffffff"/>
+    <text x="56" y="119" font-family="'Trebuchet MS', sans-serif" font-size="12" font-weight="700" fill="#ffffff">WHITE NUMBERS (outer ring)</text>
+    <text x="56" y="137" font-family="'Trebuchet MS', sans-serif" font-size="10.5" fill="#94a3b8">Minutes to travel 10 mi / 16 km</text>
+    <line x1="250" y1="125" x2="281" y2="261" stroke="#ffffff" stroke-width="1" stroke-dasharray="4,3" opacity="0.6" marker-end="url(#arrow_white)"/>
+  </g>
+
+
+  <!-- Teal numbers callout - top right -->
+  <g>
+    <rect x="750" y="100" width="230" height="50" rx="8" fill="#334155" stroke="#2DD4BF" stroke-width="1.5" opacity="0.92"/>
+    <circle cx="770" cy="125" r="8" fill="#2DD4BF"/>
+    <text x="786" y="119" font-family="'Trebuchet MS', sans-serif" font-size="12" font-weight="700" fill="#2DD4BF">TEAL NUMBERS (middle ring)</text>
+    <text x="786" y="137" font-family="'Trebuchet MS', sans-serif" font-size="10.5" fill="#94a3b8">Speed in kilometres per hour</text>
+    <line x1="750" y1="125" x2="566" y2="234" stroke="#2DD4BF" stroke-width="1" stroke-dasharray="4,3" opacity="0.6" marker-end="url(#arrow_mint)"/>
+  </g>
+
+
+  <!-- Dark numbers callout - right side -->
+  <g>
+    <rect x="840" y="310" width="145" height="50" rx="8" fill="#334155" stroke="#cbd5e1" stroke-width="1.5" opacity="0.92"/>
+    <circle cx="858" cy="335" r="8" fill="#e2e8f0"/>
+    <text x="874" y="329" font-family="'Trebuchet MS', sans-serif" font-size="12" font-weight="700" fill="#e2e8f0">DARK NUMBERS</text>
+    <text x="874" y="346" font-family="'Trebuchet MS', sans-serif" font-size="10.5" fill="#94a3b8">Speed in mph</text>
+    <line x1="840" y1="335" x2="627" y2="353" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="4,3" opacity="0.6" marker-end="url(#arrow)"/>
+  </g>
+
+
+  <!-- Teal arc callout - bottom left -->
+  <g>
+    <rect x="20" y="740" width="240" height="50" rx="8" fill="#334155" stroke="#2DD4BF" stroke-width="1.5" opacity="0.92"/>
+    <rect x="34" y="759" width="20" height="4" rx="2" fill="#2DD4BF" opacity="0.6"/>
+    <text x="62" y="763" font-family="'Trebuchet MS', sans-serif" font-size="12" font-weight="700" fill="#2DD4BF">TEAL ARC — Sweet spot</text>
+    <text x="62" y="779" font-family="'Trebuchet MS', sans-serif" font-size="10.5" fill="#94a3b8">Good progress, low risk</text>
+  </g>
+
+
+  <!-- Orange arc callout - bottom right -->
+  <g>
+    <rect x="740" y="740" width="245" height="50" rx="8" fill="#334155" stroke="#F97316" stroke-width="1.5" opacity="0.92"/>
+    <rect x="754" y="759" width="20" height="4" rx="2" fill="#F97316" opacity="0.7"/>
+    <text x="782" y="763" font-family="'Trebuchet MS', sans-serif" font-size="12" font-weight="700" fill="#F97316">ORANGE ARC — Danger zone</text>
+    <text x="782" y="779" font-family="'Trebuchet MS', sans-serif" font-size="10.5" fill="#94a3b8">More risk, barely faster</text>
+  </g>
+
+
+  <!-- Key insight -->
+  <g transform="translate(500, 870)">
+    <text x="0" y="0" text-anchor="middle" font-family="'Trebuchet MS', sans-serif" font-size="14" fill="#ffffff" letter-spacing="0.5" font-weight="600">NOTICE HOW THE GAPS BETWEEN THE WHITE NUMBERS GET SMALLER AT HIGH SPEEDS</text>
+    <text x="0" y="24" text-anchor="middle" font-family="'Trebuchet MS', sans-serif" font-size="13" fill="#ffffff" letter-spacing="0.3">Speeding from 70 → 90 mph saves under 2 minutes over 10 miles</text>
+    <text x="0" y="46" text-anchor="middle" font-family="'Trebuchet MS', sans-serif" font-size="13" fill="#ffffff" letter-spacing="0.3">but massively increases your risk of a serious accident.</text>
+  </g>
+
+
+  <text x="500" y="950" text-anchor="middle" font-family="'Trebuchet MS', sans-serif" font-size="10" fill="#64748b" letter-spacing="0.5">Based on research by Peer, E. &amp; Gamliel, E. (2013). Pace yourself: Improving time-saving judgments. Judgment and Decision Making.</text>
+
+
+  <!-- Fargeaux logo bottom-left -->
+    <g transform="translate(30, 1040) scale(0.09)">
+      <path fill="#0D9488" d="M556.02,283.46c0,6.57-.5,13.02-1.43,19.33-46.48-11.63-94.53-16.36-142.14-16.05,9.95-2.97,19.57-5.79,27.65-8.28,13.06-4.04,26.07-7.97,39.3-13.27,5.35-2.4,12.5-4.89,16.24-10.33,2.16-3.15,2.15-7.81-.37-10.8-1.55-2.05-4.63-3.41-6.45-3.95-7.71-2.13-14.04-2.42-21.51-3.22-13.66-1.21-27.16-2.05-40.7-2.98-14.09-1.29-28.39-1.07-42.23-2.98,7.16-2.49,15.25-3.75,22.63-5.65,13.19-3.03,26.47-5.66,39.86-7.83-13.51,1.09-27.01,2.66-40.44,4.63-8.42,1.27-27.31,3.17-31.24,7.05-2.29,2.26-.55,5.42,1.89,6.42,6.2,2.54,35.11,6,48.5,8.04,15.01,2.54,30.63,4.1,45.6,7.19-11.61,3.69-23.99,5.92-36.02,8.84-24.07,5.39-80.95,14.34-96.78,25.88-10.88,7.93-9.23,23.56,3.4,28.28,8.35,2.96,16.57,2.72,24.95,3.34,13.79.64,27.05,1.14,40.32,2.08,45.54,2.85,90.73,11.06,133.82,25.36-21.95,41.46-65.5,69.72-115.68,69.72-72.25,0-130.83-58.57-130.83-130.83s58.57-130.83,130.83-130.83,130.83,58.57,130.83,130.83ZM542.31,318.21l-26.57-6.32c-1.9-.45-3.81.71-4.29,2.6-.48,1.91.68,3.86,2.59,4.34l.19.05,26.09,6.59.22.06s.02,0,.03,0c2.02.48,4.05-.77,4.53-2.79.48-2.02-.77-4.05-2.79-4.53ZM461.88,303.5c-1.73-.22-3.33.98-3.58,2.71-.25,1.75.96,3.37,2.71,3.62l.15.02,26.66,3.84.18.03s.02,0,.03,0c1.85.24,3.55-1.07,3.79-2.92.24-1.85-1.07-3.55-2.92-3.79l-27.03-3.52ZM404.61,302.83c-.08,1.56,1.11,2.89,2.66,2.97h.11s26.95,1.47,26.95,1.47h.14s.02,0,.03,0c1.66.07,3.06-1.23,3.13-2.89.07-1.66-1.23-3.06-2.89-3.13l-27.19-1.09c-1.54-.06-2.85,1.12-2.93,2.67ZM366.84,299.98c-4.49-.02-9-.05-13.37-.36h-.03c-1.33-.1-2.5.9-2.61,2.23-.11,1.35.88,2.53,2.23,2.64,4.64.39,9.18.48,13.72.57l13.57.17h.04c1.45,0,2.63-1.19,2.62-2.64,0-1.45-1.19-2.63-2.64-2.62l-13.54.02ZM387.27,282.1c-.29-1.1-1.43-1.76-2.53-1.47-8.75,2.33-17.48,4.72-26.14,7.67,0,0-.02,0-.03.01-1.17.42-1.79,1.71-1.37,2.88.42,1.17,1.71,1.79,2.88,1.37h.01c8.4-3,17.06-5.5,25.73-7.94,1.09-.31,1.74-1.43,1.45-2.53ZM411.95,277.59l26.21-6.94c.89-.24,1.43-1.15,1.21-2.05-.23-.91-1.15-1.46-2.05-1.23h-.02s-26.29,6.57-26.29,6.57c0,0-.02,0-.03,0-1,.27-1.6,1.3-1.34,2.3.27,1,1.3,1.6,2.3,1.34ZM464.28,263.21c4.33-1.35,8.65-2.75,12.93-4.36,2.14-.8,4.26-1.65,6.36-2.64,2.09-1.03,4.18-2,6.12-3.82.53-.5.56-1.32.06-1.85-.49-.53-1.33-.56-1.86-.07l-.06.06c-1.38,1.28-3.44,2.3-5.4,3.21-2.01.91-4.09,1.71-6.19,2.47-4.21,1.51-8.51,2.85-12.82,4.12,0,0-.02,0-.02,0-.79.25-1.24,1.09-.99,1.88.25.79,1.09,1.24,1.88.99ZM466.48,242.2l-26.95-2.93c-.51-.06-.97.31-1.03.82-.06.52.3.98.82,1.05h.01s26.86,3.3,26.86,3.3h.04s0,0,0,0c.62.07,1.18-.38,1.24-1,.07-.62-.38-1.18-1-1.24ZM385.61,233.9h-.04c-.31-.03-.58.19-.62.49-.04.31.19.59.5.62l26.95,3.08s.02,0,.02,0c.41.04.78-.27.81-.68.04-.41-.27-.78-.68-.81l-26.94-2.7ZM406.94,223.95c4.43-.89,8.88-1.64,13.32-2.47.1-.02.17-.12.15-.22-.02-.1-.11-.17-.22-.15-4.45.77-8.92,1.45-13.36,2.29l-13.34,2.42s-.01,0-.01,0c-.2.04-.33.25-.29.45.04.2.25.33.45.29l13.29-2.61Z"/>
+      <path fill="#F97316" d="M425.2,435.04c-83.58,0-151.58-68-151.58-151.58s68-151.58,151.58-151.58,151.58,68,151.58,151.58-68,151.58-151.58,151.58ZM425.2,143.18c-77.35,0-140.29,62.93-140.29,140.29s62.93,140.29,140.29,140.29,140.29-62.93,140.29-140.29-62.93-140.29-140.29-140.29Z"/>
+    </g>
+  <text x="107" y="1072" text-anchor="start" font-family="'Trebuchet MS', sans-serif" font-size="18" fill="#0D9488" letter-spacing="4" font-weight="700">FARGEAUX</text>
+
+  <!-- Tagline bottom-right -->
+  <text x="965" y="1072" text-anchor="end" font-family="'Trebuchet MS', sans-serif" font-size="17" fill="#94a3b8" font-style="italic" letter-spacing="1">Know before you go</text>
+
+</svg>

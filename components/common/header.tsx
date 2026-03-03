@@ -13,6 +13,8 @@ export default function Header() {
 
   const navLinks = [
     { href: '/about', label: 'About' },
+    { href: '/paceometer', label: 'Paceometer' },
+    { href: '/driving-tips', label: 'Driving Tips' },
     { href: '/pricing', label: 'Pricing' },
     { href: '/contact', label: 'Contact' },
   ]

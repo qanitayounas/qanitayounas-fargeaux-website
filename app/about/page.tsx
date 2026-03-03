@@ -1,141 +1,139 @@
 'use client'
 
 import { motion } from "framer-motion"
-import { BookOpen, LayoutDashboard, BarChart3, ClipboardCheck } from "lucide-react"
+import { ShieldCheck, Heart, Globe, Lightbulb, Info } from "lucide-react"
 
 export default function AboutPage() {
-  const features = [
+  const sections = [
     {
-      icon: LayoutDashboard,
-      title: "Structured Modules",
-      description:
-        "26 carefully organized learning modules covering essential UK driving topics — from left-hand driving fundamentals to road positioning and right of way.",
+      title: "A road is a promise between strangers",
+      description: "Every time you get behind the wheel, you enter an unspoken agreement with every other person on that road - drivers, cyclists, pedestrians, families walking to school, someone's grandmother crossing the street. You're promising to be competent, attentive, and careful. You're promising that you belong there. That promise matters more than most of us ever stop to think about.",
+      icon: Heart,
+      color: "text-rose-500",
+      bgColor: "bg-rose-50"
     },
     {
-      icon: BookOpen,
-      title: "Interactive Flashcards",
-      description:
-        "Over 400 flashcards designed to reinforce memory through repetition and active recall.",
+      title: "Not everyone gets to drive",
+      description: "Billions of people on this planet will never sit behind a steering wheel. For some, it's economics. For others, it's geography, disability, age, or the laws of the country they were born in. Driving - the ability to go where you want, when you want, on your own terms - is one of the most profound freedoms a person can have. And most of us treat it as ordinary. It isn't.",
+      icon: Globe,
+      color: "text-blue-500",
+      bgColor: "bg-blue-50"
     },
     {
-      icon: BarChart3,
-      title: "Progress Tracking",
-      description:
-        "Visual completion indicators help you focus on weak areas and build real confidence before getting behind the wheel.",
+      title: "Tourism should enrich communities, not endanger them",
+      description: "Every year, international tourists are killed or seriously injured on unfamiliar roads. An unprepared tourist doesn't just put themselves at risk. They put entire communities at risk. When tourists arrive unprepared - confused, stressed, making dangerous mistakes - they create friction and frustration in the places they've come to enjoy.",
+      icon: ShieldCheck,
+      color: "text-teal-600",
+      bgColor: "bg-teal-50"
     },
     {
-      icon: ClipboardCheck,
-      title: "Realistic Practice Tests",
-      description:
-        "Test your understanding with structured mock assessments designed to simulate real-world road scenarios.",
-    },
+      title: "Why Fargeaux exists",
+      description: "Fargeaux was built on a simple belief: preparation transforms outcomes. We exist to save lives. To make local communities safer. And to help every tourist become the kind of visitor that locals are glad to see. Not through passive reading, but through active, science-backed learning methods that actually build knowledge into memory where it counts: behind the wheel.",
+      icon: Lightbulb,
+      color: "text-orange-500",
+      bgColor: "bg-orange-50"
+    }
   ]
 
   return (
-    <main className="relative bg-gradient-to-b from-slate-50 via-white to-slate-50 text-slate-800 overflow-hidden">
+    <main className="relative bg-white text-slate-800 overflow-hidden font-poppins">
 
       {/* HERO */}
-      <section className="pt-20 md:pt-28 pb-16">
+      <section className="pt-24 md:pt-32 pb-16 bg-slate-50/50">
         <div className="max-w-5xl mx-auto px-6 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 40 }}
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <p className="text-teal-600 text-xs font-semibold tracking-widest uppercase mb-4">
-              Why Fargeaux Exists
-            </p>
-
-            <h1 className="font-poppins font-semibold text-3xl md:text-5xl leading-tight mb-6 text-slate-900">
-              Safer Roads Start With
-              <span className="block text-teal-600">Prepared Drivers</span>
+            <h1 className="text-4xl md:text-6xl font-bold text-slate-900 mb-6 tracking-tight">
+              About <span className="text-teal-600">Fargeaux</span>
             </h1>
+            <p className="text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed">
+              We believe that the best holidays aren't just about where you go — they're about how you get there.
+            </p>
           </motion.div>
         </div>
       </section>
 
-{/* PREMIUM MISSION CONTAINER */}
-<section className="pb-24">
-  <div className="max-w-4xl mx-auto px-6">
-    <motion.div
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.8 }}
-      className="
-        relative
-        rounded-3xl
-        p-10 md:p-14
-        text-center
-        border border-slate-200/60
-        bg-gradient-to-br from-white via-slate-50 to-slate-100/60
-        shadow-[0px_25px_70px_rgba(15,23,42,0.06)]
-        backdrop-blur-sm
-      "
-    >
-      {/* subtle glow accent */}
-      <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-teal-500/5 via-transparent to-orange-500/5 pointer-events-none" />
-
-      <div className="relative">
-        <p className="text-base md:text-lg text-slate-600 leading-relaxed mb-6">
-          Every year, international tourists are killed or seriously injured on UK roads because they weren’t prepared for left-hand driving, unfamiliar road signs, and different road rules.
-        </p>
-
-        <p className="text-base md:text-lg text-slate-600 leading-relaxed mb-8">
-          But it’s not just tourists who pay the price — local residents, cyclists, and pedestrians share those same roads. Beyond road safety, unprepared tourists create friction, frustration, and real harm in the communities they visit.
-        </p>
-
-        <p className="text-xl md:text-2xl font-semibold text-slate-900 mb-4">
-          Fargeaux exists to change that.
-        </p>
-
-        <p className="text-base md:text-lg text-slate-700 leading-relaxed">
-          A prepared tourist is a safer tourist, a more respectful guest, and a better ambassador for travel done right.
-        </p>
-      </div>
-    </motion.div>
-  </div>
-</section>
-
-      {/* FEATURES GRID */}
-      <section className="pb-32">
+      {/* CORE PHILOSOPHY */}
+      <section className="py-24">
         <div className="max-w-6xl mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-            {features.map((feature, i) => {
-              const Icon = feature.icon
-
-              return (
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: i * 0.1 }}
-                  className="group relative bg-white rounded-3xl p-10 border border-slate-200
-                             hover:border-orange-500/40 transition-all duration-500
-                             shadow-sm hover:shadow-[0px_20px_60px_rgba(0,0,0,0.06)]
-                             hover:-translate-y-1 hover:scale-[1.015]"
-                >
-                  <div className="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition-all duration-500
-                                  bg-gradient-to-br from-orange-100/30 via-transparent to-orange-200/30 pointer-events-none" />
-
-                  <div className="relative w-14 h-14 flex items-center justify-center mb-6
-                                  rounded-xl bg-slate-50 border border-slate-200
-                                  transition-all duration-300 group-hover:border-orange-500/40">
-                    <Icon className="w-6 h-6 text-teal-600/80 group-hover:text-orange-500 transition-all duration-300" />
-                  </div>
-
-                  <h3 className="font-poppins text-xl font-semibold text-slate-900 mb-3">
-                    {feature.title}
-                  </h3>
-
-                  <p className="text-sm md:text-base text-slate-600 leading-relaxed">
-                    {feature.description}
-                  </p>
-                </motion.div>
-              )
-            })}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+            {sections.map((section, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                className="group p-8 rounded-3xl border border-slate-100 bg-white hover:border-teal-100 hover:shadow-xl hover:shadow-teal-500/5 transition-all duration-300"
+              >
+                <div className={`w-12 h-12 ${section.bgColor} ${section.color} rounded-2xl flex items-center justify-center mb-6`}>
+                  <section.icon size={24} />
+                </div>
+                <h3 className="text-2xl font-bold text-slate-900 mb-4 group-hover:text-teal-600 transition-colors">
+                  {section.title}
+                </h3>
+                <p className="text-slate-600 leading-relaxed">
+                  {section.description}
+                </p>
+              </motion.div>
+            ))}
           </div>
+        </div>
+      </section>
+
+      {/* BONNUM LUX */}
+      <section className="py-24 bg-[#334155] text-white overflow-hidden relative">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-teal-500/10 blur-[120px] rounded-full translate-x-1/2 -translate-y-1/2" />
+        <div className="max-w-5xl mx-auto px-6 relative z-10">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            className="text-center"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold mb-8">
+              Bonnum Lux = <span className="text-teal-400">Good Light</span>
+            </h2>
+            <div className="max-w-3xl mx-auto space-y-6 text-slate-300 text-lg leading-relaxed">
+              <p>
+                Fargeaux is a product of Bonnum Lux Group — a name that means "good light" in Latin. We chose it because that's what we believe preparation provides: clarity where there was confusion, confidence where there was anxiety, and safety where there was risk.
+              </p>
+              <p>
+                Our charity affiliates — <span className="text-white font-medium">iRAP, WWF, and Day One Trauma Support</span> — exist because of the damage that unprepared driving causes. We're proud to work upstream, helping to prevent the harm before it happens.
+              </p>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* FINAL CALL */}
+      <section className="py-24 text-center">
+        <div className="max-w-4xl mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="space-y-8"
+          >
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-50 text-orange-600 text-sm font-semibold tracking-wide uppercase">
+              Know Before You Go
+            </div>
+            <h2 className="text-3xl md:text-5xl font-bold text-slate-900">
+              Drive safe. Drive confident. <br className="hidden md:block" />
+              Drive fun. Holiday better.
+            </h2>
+            <p className="text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto">
+              The roads you'll travel don't belong to you. They belong to the people who live there. Honour that trust. Learn before you leave. Arrive ready.
+            </p>
+            <div className="pt-4">
+              <button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-2xl font-semibold shadow-lg shadow-orange-500/20 transition-all hover:-translate-y-1">
+                Start Your Journey
+              </button>
+            </div>
+          </motion.div>
         </div>
       </section>
 
