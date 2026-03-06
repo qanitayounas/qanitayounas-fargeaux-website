@@ -48,12 +48,12 @@ export default function FeaturesProSection() {
         <div className="mx-auto mb-6 h-[1px] w-24 bg-gradient-to-r from-orange-300/40 via-orange-500/70 to-orange-300/40" />
 
         {/* Header */}
-        <div className="max-w-6xl mx-auto text-center mb-10">
+        <div className="text-center mb-10 px-4">
           <p className="text-primary text-sm font-semibold tracking-wide uppercase mb-2">
             Features
           </p>
 
-          <h2 className="font-poppins text-4xl md:text-5xl font-semibold text-gray-900 tracking-tight leading-[1.05] whitespace-nowrap">
+          <h2 className="font-poppins text-3xl md:text-5xl font-semibold text-gray-900 tracking-tight leading-tight">
             Everything You Need to Master Road Rules
           </h2>
         </div>

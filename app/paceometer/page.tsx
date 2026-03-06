@@ -41,9 +41,15 @@ export default function PaceometerPage() {
                             </div>
 
                             <div className="pt-4 flex flex-wrap gap-4">
-                                <button className="bg-teal-600 hover:bg-teal-700 text-white px-8 py-4 rounded-2xl font-semibold shadow-lg shadow-teal-500/20 transition-all hover:-translate-y-1">
-                                    Download Fargeaux
-                                </button>
+                                <div className="relative inline-block group cursor-default">
+                                    <button className="relative bg-teal-50 border-2 border-teal-200 text-teal-700 px-8 py-4 rounded-2xl font-semibold transition-all duration-300 group-hover:border-teal-400 group-hover:bg-teal-100 overflow-hidden">
+                                        Download Fargeaux
+                                        {/* Coming Soon overlay */}
+                                        <span className="absolute inset-0 flex items-center justify-center bg-teal-600/90 text-white text-sm font-bold tracking-widest uppercase rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                            Coming Soon
+                                        </span>
+                                    </button>
+                                </div>
                             </div>
                         </motion.div>
 
@@ -54,11 +60,11 @@ export default function PaceometerPage() {
                             transition={{ duration: 1, delay: 0.2 }}
                             className="relative"
                         >
-                            <div className="relative z-10 p-4 bg-slate-50 rounded-[2.5rem] border border-slate-100 shadow-[0_40px_100px_rgba(0,0,0,0.08)]">
+                            <div className="relative z-10">
                                 <img
                                     src="/fargeaux_paceometer.svg"
                                     alt="The Fargeaux Paceometer"
-                                    className="w-full h-auto rounded-3xl"
+                                    className="w-full h-auto"
                                 />
                             </div>
 

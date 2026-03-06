@@ -6,26 +6,36 @@ import { ChevronDown } from "lucide-react";
 import { useEffect, useState } from "react";
 
 const DownloadButtons = () => (
-  <div className="flex flex-col sm:flex-row gap-3 pt-6 w-full sm:w-auto">
-    <a href="https://apps.apple.com" target="_blank" rel="noopener noreferrer">
-      <div className="flex items-center gap-3 bg-black text-white px-5 py-3 rounded-xl shadow-md hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 w-[200px]">
-        <FaApple className="w-5 h-5" />
-        <div>
-          <p className="text-[11px] opacity-70">Download on the</p>
-          <p className="text-sm font-semibold">App Store</p>
+  <div className="flex flex-row flex-wrap justify-center lg:justify-start gap-3 pt-6 w-full md:w-auto">
+    {/* App Store */}
+    <div className="group relative flex-1 max-w-[160px] sm:max-w-[180px] cursor-default">
+      <div className="relative flex items-center gap-2 bg-black text-white px-3 py-2 sm:px-4 sm:py-2.5 rounded-lg shadow-md transition-all duration-300 w-full justify-center lg:justify-start overflow-hidden">
+        <FaApple className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0" />
+        <div className="text-left">
+          <p className="text-[9px] sm:text-[10px] opacity-70 leading-none">Download on the</p>
+          <p className="text-xs sm:text-sm font-semibold whitespace-nowrap leading-tight">App Store</p>
         </div>
+        {/* Coming Soon overlay */}
+        <span className="absolute inset-0 flex items-center justify-center bg-black/85 text-white text-[10px] sm:text-xs font-bold tracking-widest uppercase rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          Coming Soon
+        </span>
       </div>
-    </a>
+    </div>
 
-    <a href="https://play.google.com" target="_blank" rel="noopener noreferrer">
-      <div className="flex items-center gap-3 bg-black text-white px-5 py-3 rounded-xl shadow-md hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 w-[200px]">
-        <FaGooglePlay className="w-5 h-5" />
-        <div>
-          <p className="text-[11px] opacity-70">Get it on</p>
-          <p className="text-sm font-semibold">Google Play</p>
+    {/* Google Play */}
+    <div className="group relative flex-1 max-w-[160px] sm:max-w-[180px] cursor-default">
+      <div className="relative flex items-center gap-2 bg-black text-white px-3 py-2 sm:px-4 sm:py-2.5 rounded-lg shadow-md transition-all duration-300 w-full justify-center lg:justify-start overflow-hidden">
+        <FaGooglePlay className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0" />
+        <div className="text-left">
+          <p className="text-[9px] sm:text-[10px] opacity-70 leading-none">Get it on</p>
+          <p className="text-xs sm:text-sm font-semibold whitespace-nowrap leading-tight">Google Play</p>
         </div>
+        {/* Coming Soon overlay */}
+        <span className="absolute inset-0 flex items-center justify-center bg-black/85 text-white text-[10px] sm:text-xs font-bold tracking-widest uppercase rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          Coming Soon
+        </span>
       </div>
-    </a>
+    </div>
   </div>
 );
 
@@ -51,7 +61,7 @@ export default function HeroProSection() {
   };
 
   return (
-    <section className="relative bg-white pt-12 md:pt-20 pb-32 overflow-hidden">
+    <section className="relative bg-white pt-12 md:pt-20 pb-20 md:pb-32 overflow-hidden">
 
       <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
@@ -65,10 +75,10 @@ export default function HeroProSection() {
               Road Rules Learning App
             </p>
 
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[56px] font-semibold text-gray-900 leading-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-[56px] font-semibold text-gray-900 leading-[1.1] tracking-tight">
               Learn Like a Local,
-              <br className="hidden sm:block" />
-              <span className="text-primary">Drive Safer</span>
+              <br className="hidden md:block" />
+              <span className="text-primary"> Drive Safer</span>
             </h1>
 
             <p className="text-gray-600 text-sm sm:text-[15px] leading-relaxed">
@@ -77,7 +87,7 @@ export default function HeroProSection() {
             </p>
 
             {/* Stats */}
-            <div className="flex justify-center lg:justify-start gap-8 pt-2">
+            <div className="flex justify-center lg:justify-start gap-4 sm:gap-8 pt-2">
               {[
                 { value: '424', label: 'Cards' },
                 { value: '26', label: 'Modules' },
@@ -91,7 +101,7 @@ export default function HeroProSection() {
             </div>
 
             <div className="pt-4 flex justify-center lg:justify-start">
-              <Button className="bg-orange-500 text-white px-6 py-5 rounded-lg text-sm font-medium hover:bg-orange-600 transition-all duration-300">
+              <Button className="bg-orange-500 text-white px-5 py-3 md:px-6 md:py-5 rounded-lg text-sm font-medium hover:bg-orange-600 transition-all duration-300">
                 Explore the experience
               </Button>
             </div>
