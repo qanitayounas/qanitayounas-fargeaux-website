@@ -6,33 +6,34 @@ export default function PricingPage() {
   const plans = [
     {
       name: 'Free Trial',
-      price: '$0 AUD',
+      price: '$0 USD',
       description: 'Test the experience for 24 hours',
       features: [
         'Access to 3 starter modules',
         '50 sample flashcards',
-        '3 sample practice maps',
+        '3 sample practice brain trainers',
         'No credit card required',
         '24-hour limited access',
       ],
       recommended: false,
     },
     {
-      name: 'Basic Package',
-      price: '$79 AUD',
+      name: '1 Country Basic Package',
+      price: '$79 USD',
       description: 'Complete access to all core learning materials',
       features: [
         'All 26 modules',
-        '12 practice maps',
+        '12 practice brain trainers',
         'Theory test preparation',
         'Progress saving',
         '424 flashcards',
+        '$15 USD per country',
       ],
       recommended: false,
     },
     {
-      name: 'Premium Package',
-      price: '$119 AUD',
+      name: 'All Countries Premium Package',
+      price: '$119 USD',
       description: 'Unlock advanced tools and priority support',
       features: [
         'Everything in Basic',

@@ -99,7 +99,7 @@ export default function AboutPage() {
             </h2>
             <div className="max-w-3xl mx-auto space-y-6 text-slate-300 text-lg leading-relaxed">
               <p>
-                Fargeaux is a product of Bonnum Lux Group — a name that means "good light" in Latin. We chose it because that's what we believe preparation provides: clarity where there was confusion, confidence where there was anxiety, and safety where there was risk.
+                Fargeaux is a product of Bonnum Lux Group - a name that means "good light" in Latin. We chose it because that's what we believe preparation provides: clarity where there was confusion, confidence where there was anxiety, and safety where there was risk.
               </p>
               <p>
                 Our charity affiliates — <span className="text-white font-medium">iRAP, WWF, and Day One Trauma Support</span> — exist because of the damage that unprepared driving causes. We're proud to work upstream, helping to prevent the harm before it happens.
