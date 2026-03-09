@@ -15,7 +15,7 @@ export default function DrivingTipsPage() {
         },
         {
             title: "Master the Priority Rules",
-            description: "Does traffic from the right always have priority? Who goes first at a 4-way stop? Priority rules differ wildly (e.g., 'Priorité à droite' in France). Fargeaux maps help you learn these before you land.",
+            description: "Does traffic from the right always have priority? Who goes first at a 4-way stop? Priority rules differ wildly (e.g., 'Priorité à droite' in France). Fargeaux brain trainers help you learn these before you land.",
             icon: AlertTriangle,
             color: "text-orange-500",
             bgColor: "bg-orange-50/50",
@@ -230,13 +230,28 @@ export default function DrivingTipsPage() {
                         </p>
                         <div className="pt-8">
                             <motion.button
-                                whileHover={{ scale: 1.05, y: -2 }}
-                                whileTap={{ scale: 0.98 }}
-                                className="bg-teal-600 hover:bg-teal-700 text-white px-14 py-6 rounded-full font-bold shadow-[0_20px_40px_rgba(13,148,136,0.25)] transition-all relative overflow-hidden group"
-                            >
-                                <div className="absolute inset-0 bg-gradient-to-r from-teal-400/20 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
-                                <span className="relative z-10">Download the Fargeaux App</span>
-                            </motion.button>
+  whileHover={{ scale: 1.05, y: -2 }}
+  whileTap={{ scale: 0.98 }}
+  className="bg-teal-600 hover:bg-teal-700 text-white px-14 py-6 rounded-full font-bold shadow-[0_20px_40px_rgba(13,148,136,0.25)] transition-all relative overflow-hidden group"
+>
+  {/* Shine Effect */}
+  <div className="absolute inset-0 bg-gradient-to-r from-teal-400/20 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
+
+  {/* Text Container */}
+  <span className="relative z-10 block h-6 overflow-hidden">
+    
+    {/* Default Text */}
+    <span className="block transition-transform duration-300 group-hover:-translate-y-6">
+      Download the Fargeaux App
+    </span>
+
+    {/* Hover Text */}
+    <span className="block absolute left-0 top-6 w-full text-center transition-transform duration-300 group-hover:-translate-y-6">
+      Coming Soon
+    </span>
+
+  </span>
+</motion.button>
                         </div>
                         <div className="space-y-4">
                             <p className="text-slate-400 text-[10px] font-bold tracking-[0.3em] uppercase">

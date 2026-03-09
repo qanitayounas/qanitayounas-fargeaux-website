@@ -4,7 +4,7 @@ export default function BenefitsSection() {
   const benefits = [
     {
       title: 'Confidence Behind the Wheel',
-      description: "We cannot promise exact outcomes. Master road rules before you arrive to reduce uncertainty and stress.",
+      description: "Master road rules before you arrive to reduce uncertainty and stress.",
       gradient: 'from-blue-200 to-blue-400',
     },
     {
@@ -34,8 +34,8 @@ export default function BenefitsSection() {
         {/* Header */}
         <div className="text-center mb-16 animate-slide-in-up">
           <h2 className="font-poppins font-800 text-4xl md:text-5xl text-foreground mb-4 text-balance">
-            Why Choose <span className="text-primary">Fargeaux</span>
-          </h2>
+  Why Choose <span className="text-primary text-5xl md:text-6xl lg:text-7xl">Fargeaux</span>
+</h2>
           <p className="text-xl text-slate-600 max-w-2xl mx-auto text-balance">
             More than just another learning app. Purpose-built for travelers.
           </p>

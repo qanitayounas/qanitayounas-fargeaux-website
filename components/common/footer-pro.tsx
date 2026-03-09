@@ -30,7 +30,7 @@ export default function FooterPro() {
             </Link>
 
             <p className="text-gray-400 text-sm leading-relaxed max-w-xs">
-              Master foreign road rules before you drive. Learn safer with interactive flashcards and real-world training maps.
+              Master foreign road rules before you drive. Learn safer with interactive flashcards and real time brain training.
             </p>
 
             {/* Social Section */}
