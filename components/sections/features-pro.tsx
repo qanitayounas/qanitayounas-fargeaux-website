@@ -30,7 +30,7 @@ export default function FeaturesProSection() {
       icon: Clock,
       title: "Flexible Learning",
       description:
-        "Learn at your own pace with sessions that fit into your schedule—5 minutes or 50",
+        "Learn at your own pace with sessions that fit into your schedule - 5 minutes or 50",
     },
     {
       icon: Target,
@@ -61,7 +61,7 @@ export default function FeaturesProSection() {
         {/* Research Card */}
         <div className="max-w-4xl mx-auto mb-10 p-6 md:p-8 bg-orange-50 border border-orange-200 rounded-xl shadow-md text-center">
           <p className="text-gray-800 text-base md:text-lg leading-relaxed">
-            Fargeaux is grounded in established cognitive science. Our flashcard and quiz-based learning system draws on spaced repetition research (Kornell, 2009; Kang, 2016) and the testing effect (Roediger & Karpicke, 2006) — methods proven to significantly improve long-term retention compared to passive study. We believe that preparing tourists with knowledge that actually sticks is the most effective form of upstream road safety.
+            Fargeaux is grounded in established cognitive science. Our flashcard and quiz-based learning system draws on spaced repetition research (Kornell, 2009; Kang, 2016) and the testing effect (Roediger & Karpicke, 2006) - methods proven to significantly improve long-term retention compared to passive study. We believe that preparing tourists with knowledge that actually sticks is the most effective form of upstream road safety.
           </p>
         </div>
 

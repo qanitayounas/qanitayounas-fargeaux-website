@@ -28,7 +28,7 @@ export default function PaceometerPage() {
                             </h1>
 
                             <p className="text-xl text-slate-600 leading-relaxed max-w-2xl">
-                                This is a paceometer — and once you understand it, you'll never feel the urge to speed again.
+                                This is a paceometer - and once you understand it, you'll never feel the urge to speed again.
                             </p>
 
                             <div className="space-y-4 text-slate-600 text-lg">
@@ -36,7 +36,7 @@ export default function PaceometerPage() {
                                     Our brains simply aren't wired to intuitively grasp the inverse relationship between speed and time. The paceometer makes that relationship visible at a glance.
                                 </p>
                                 <p>
-                                    For anyone driving in an unfamiliar country — navigating new road signs, different speed limits, or switching to the opposite side of the road - this matters even more.
+                                    For anyone driving in an unfamiliar country - navigating new road signs, different speed limits, or switching to the opposite side of the road - this matters even more.
                                 </p>
                             </div>
 

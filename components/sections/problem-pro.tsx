@@ -39,7 +39,7 @@ export default function ProblemProSection() {
             The Challenge of Learning New Road Rules
           </h2>
           <p className="text-gray-600 text-base md:text-lg leading-relaxed">
-            Driving in a foreign country is more than just getting a license—it's about understanding local road culture, safety standards, and regulations that could save your life.
+            Driving in a foreign country is more than just getting a license - it's about understanding local road culture, safety standards, and regulations that could save your life.
           </p>
         </div>
 
