@@ -15,6 +15,7 @@ export default function Header() {
     { href: '/about', label: 'About' },
     { href: '/paceometer', label: 'Paceometer' },
     { href: '/driving-tips', label: 'Driving Tips' },
+    { href: '/giving-back', label: 'Giving Back' },
     { href: '/pricing', label: 'Pricing' },
     { href: '/contact', label: 'Contact' },
   ]
@@ -133,29 +134,19 @@ export default function Header() {
 
             <div className="flex flex-col gap-3 pt-4 border-t border-white/10 mt-4">
 
+              {/* Android Mobile Button */}
               <Button
                 variant="outline"
-                className="w-full rounded-xl font-normal text-white border-white/20 group relative"
+                className="w-full font-normal bg-orange-500 hover:bg-orange-600 text-white rounded-xl"
               >
-                <span className="invisible">Coming Soon</span>
-                <span className="absolute inset-0 flex items-center justify-center transition-opacity duration-300 group-hover:opacity-0">
-                  Android
-                </span>
-                <span className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  Coming Soon
-                </span>
+                Android (Coming Soon)
               </Button>
 
+              {/* Download Mobile Button */}
               <Button
-                className="w-full font-normal bg-orange-500 hover:bg-orange-600 text-white rounded-xl group relative"
+                className="w-full font-normal bg-orange-500 hover:bg-orange-600 text-white rounded-xl"
               >
-                <span className="invisible">Download App</span>
-                <span className="absolute inset-0 flex items-center justify-center transition-opacity duration-300 group-hover:opacity-0">
-                  Download App
-                </span>
-                <span className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  Coming Soon
-                </span>
+                Download App (Coming Soon)
               </Button>
 
             </div>
