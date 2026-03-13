@@ -105,6 +105,15 @@ export default function FooterPro() {
 
                 <li>
                   <Link
+                    href="/pioneers"
+                    className="text-gray-400 hover:text-[#0d9488] transition-colors text-sm"
+                  >
+                    Safety Pioneers
+                  </Link>
+                </li>
+
+                <li>
+                  <Link
                     href="/refund"
                     className="text-gray-400 hover:text-[#0d9488] transition-colors text-sm"
                   >
