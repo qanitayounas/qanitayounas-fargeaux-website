@@ -3,6 +3,7 @@
 import { motion } from "framer-motion"
 import { ShieldCheck, Gift, Award, Heart, CheckCircle2, ArrowRight } from "lucide-react"
 import Link from "next/link"
+import { PIONEER_COUNT } from "@/lib/pioneers"
 
 export default function PioneersPage() {
   const benefits = [
@@ -77,9 +78,6 @@ export default function PioneersPage() {
             initial="hidden"
             animate="show"
           >
-            <motion.div variants={item} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-50 text-orange-600 text-sm font-semibold tracking-wide uppercase mb-6">
-              Safety Pioneer Program
-            </motion.div>
             <motion.h1 variants={item} className="text-4xl md:text-6xl font-bold text-slate-900 mb-6 tracking-tight">
               Be one of our first 1,000. <br />
               <span className="text-orange-500">Get $20 back.</span>
@@ -180,10 +178,13 @@ export default function PioneersPage() {
       {/* COUNTER */}
       <section className="py-24 bg-[#334155] text-white">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-3xl font-bold mb-12">How many spots are left?</h2>
+          <h2 className="text-3xl font-bold mb-4">How many spots are left?</h2>
+          <p className="text-slate-400 text-sm max-w-md mx-auto italic mb-12">
+            We'll update the count here regularly. Once 1,000 spots are filled, this offer closes permanently.
+          </p>
           <div className="relative inline-block">
             <div className="text-5xl md:text-7xl font-black text-orange-500 mb-4 tracking-tighter">
-              42 <span className="text-slate-400 text-3xl font-bold">/ 1,000</span>
+              {PIONEER_COUNT} <span className="text-slate-400 text-3xl font-bold">of 1,000</span>
             </div>
           </div>
           <p className="text-xl text-slate-300 mb-8 mt-4">
@@ -192,15 +193,12 @@ export default function PioneersPage() {
           <div className="w-full max-w-md mx-auto h-3 bg-slate-700 rounded-full overflow-hidden">
             <motion.div
               initial={{ width: 0 }}
-              whileInView={{ width: "4%" }}
+              whileInView={{ width: `${(PIONEER_COUNT / 1000) * 100}%` }}
               viewport={{ once: true }}
               transition={{ duration: 1.5, ease: "easeOut" }}
               className="h-full bg-orange-500"
             />
           </div>
-          <p className="mt-8 text-slate-400 text-sm max-w-md mx-auto italic">
-            We'll update the count here regularly. Once 1,000 spots are filled, this offer closes permanently.
-          </p>
         </div>
       </section>
 
@@ -236,7 +234,7 @@ export default function PioneersPage() {
             className="space-y-8"
           >
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-50 text-slate-400 text-sm font-semibold tracking-wide uppercase">
-              Know Before You Go
+              Know before you go — Fargeaux
             </div>
             <h2 className="text-4xl md:text-6xl font-extrabold text-slate-900 tracking-tight">
               Fargeaux
